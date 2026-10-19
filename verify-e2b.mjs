@@ -95,9 +95,8 @@ async function main() {
       'sys.path.insert(0, "sdk/python/boxfleet-sdk")',
       'import boxfleet_sdk',
       'assert hasattr(boxfleet_sdk, "Client") and hasattr(boxfleet_sdk, "AsyncClient")',
-      'assert hasattr(boxfleet_sdk, "BoxFleetError") and hasattr(boxfleet_sdk, "RESPONSE_DESCRIPTORS")',
-      'assert "getWhiteLabelCloudCatalog" in boxfleet_sdk.RESPONSE_DESCRIPTORS',
-      'assert "createCloudBox" in boxfleet_sdk.RESPONSE_DESCRIPTORS',
+      'assert hasattr(boxfleet_sdk, "BoxfleetError") and hasattr(boxfleet_sdk, "CloudBox")',
+      'assert hasattr(boxfleet_sdk, "CreateCloudBoxRequest") and hasattr(boxfleet_sdk, "WhiteLabelCloudCatalog")',
       'print("python-sdk-ok")',
     ].join('; ');
     let pythonBin = 'python3';
