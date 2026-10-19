@@ -77,13 +77,14 @@ async function main() {
     assert.equal(health.ok, true);
     assert.equal(health.service, 'boxfleet-control-plane');
 
-    const catalog = await tsClient.cloud.getWhiteLabelCloudCatalog();
+    const catalog = await tsClient.cloud.getWhiteLabelCatalog();
     assert.equal(catalog.schema, 'jackai-box.white-label-cloud/v1');
     assert.equal(catalog.zeroIdleCostModel.fixedIdleInfrastructureCostUsd, 0);
 
     const jsClient = new JsClient({ baseURL, apiKey: 'bf_test_token' });
-    const created = await jsClient.cloud.createCloudBox({
-      body: { templateId: 'boxfleet-universal', backend: 'fly-machines' },
+    const created = await jsClient.cloud.createBox({
+      templateId: 'boxfleet-universal',
+      backend: 'fly-machines',
     });
     assert.equal(created.box.boxId, 'bfx_e2bverified01');
     assert.equal(typeof BoxFleetError, 'function');
