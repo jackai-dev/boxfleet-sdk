@@ -89,14 +89,17 @@ async function main() {
     assert.equal(created.box.boxId, 'bfx_e2bverified01');
     assert.equal(typeof BoxFleetError, 'function');
 
-    // Verify Python SDK import and execution
-    const pyScript = [
+    // Verify Python SDK import, exported client & descriptor surface, and zero-dependency MCP Knowledge Server
+    const pyCmd = [
       'import sys, json',
       'sys.path.insert(0, "sdk/python/boxfleet-sdk")',
       'import boxfleet_sdk',
-      f => f,
-    ];
-    const pyCmd = `import sys; sys.path.insert(0, 'sdk/python/boxfleet-sdk'); import boxfleet_sdk; c = boxfleet_sdk.Client(base_url='${baseURL}', api_key='bf_test_token'); res = c.get_health(); assert res['ok'] is True; print('python-sdk-ok')`;
+      'assert hasattr(boxfleet_sdk, "Client") and hasattr(boxfleet_sdk, "AsyncClient")',
+      'assert hasattr(boxfleet_sdk, "BoxFleetError") and hasattr(boxfleet_sdk, "RESPONSE_DESCRIPTORS")',
+      'assert "getWhiteLabelCloudCatalog" in boxfleet_sdk.RESPONSE_DESCRIPTORS',
+      'assert "createCloudBox" in boxfleet_sdk.RESPONSE_DESCRIPTORS',
+      'print("python-sdk-ok")',
+    ].join('; ');
     let pythonBin = 'python3';
     try {
       execFileSync('python3', ['--version'], { stdio: 'ignore' });
@@ -105,6 +108,21 @@ async function main() {
     }
     const pyOut = execFileSync(pythonBin, ['-c', pyCmd], { encoding: 'utf8' }).trim();
     assert.equal(pyOut, 'python-sdk-ok');
+
+    // Verify generated MCP Knowledge Server (stdlib Python)
+    const mcpInit = JSON.stringify({
+      jsonrpc: '2.0',
+      id: 1,
+      method: 'initialize',
+      params: { protocolVersion: '2024-11-05', capabilities: {}, clientInfo: { name: 'e2b-verifier', version: '1.0.0' } },
+    }) + '\n';
+    const mcpOut = execFileSync(pythonBin, ['mcp/boxfleet-mcp/server.py'], {
+      input: mcpInit,
+      encoding: 'utf8',
+    }).trim();
+    const mcpResponse = JSON.parse(mcpOut.split('\n')[0]);
+    assert.equal(mcpResponse.id, 1);
+    assert.ok(mcpResponse.result.serverInfo.name.includes('boxfleet'));
 
     const skillMd = await readFile(join(process.cwd(), 'skill/use-boxfleet/SKILL.md'), 'utf8');
     assert.ok(skillMd.includes('BoxFleet'));
