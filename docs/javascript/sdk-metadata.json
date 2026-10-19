@@ -1,0 +1,1178 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/sdk-documentation-metadata/v1.json",
+  "availability": "available",
+  "language": "javascript",
+  "member_source": "artifact-manifest-surface",
+  "operations": [
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.cancel(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs/{jobId}/cancel"
+      },
+      "members": {
+        "flat": "cancelJob",
+        "resource": "jobs.cancel"
+      },
+      "operation_id": "cancelJob",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/canceljob.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.cancel(jobId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.cloud.createBox({}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "flat": "createCloudBox",
+        "resource": "cloud.createBox"
+      },
+      "operation_id": "createCloudBox",
+      "parameters": [],
+      "reference_page": "operations/cloud/createcloudbox.md",
+      "request_body": {
+        "contract_type": "CreateCloudBoxRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CreateCloudBoxRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxEnvelope",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxEnvelope"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "client.cloud.createBox(body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.system.describeAgentMods();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/mods"
+      },
+      "members": {
+        "flat": "describeAgentMods",
+        "resource": "system.describeAgentMods"
+      },
+      "operation_id": "describeAgentMods",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "target",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/describeagentmods.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ModsCatalogResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ModsCatalogResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.system.describeAgentMods(target_2?, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.system.getHealth();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/health"
+      },
+      "members": {
+        "flat": "getHealth",
+        "resource": "system.getHealth"
+      },
+      "operation_id": "getHealth",
+      "parameters": [],
+      "reference_page": "operations/system/gethealth.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "HealthResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "HealthResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.system.getHealth(requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.getExecution(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/execution"
+      },
+      "members": {
+        "flat": "getJobExecution",
+        "resource": "jobs.getExecution"
+      },
+      "operation_id": "getJobExecution",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobexecution.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobExecutionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobExecutionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.getExecution(jobId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.getLogs(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/logs"
+      },
+      "members": {
+        "flat": "getJobLogs",
+        "resource": "jobs.getLogs"
+      },
+      "operation_id": "getJobLogs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjoblogs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobLogsResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobLogsResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.getLogs(jobId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.getStatus(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}"
+      },
+      "members": {
+        "flat": "getJobStatus",
+        "resource": "jobs.getStatus"
+      },
+      "operation_id": "getJobStatus",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobstatus.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.getStatus(jobId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.fleet.getOrganization(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/fleet"
+      },
+      "members": {
+        "flat": "getOrganizationFleet",
+        "resource": "fleet.getOrganization"
+      },
+      "operation_id": "getOrganizationFleet",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/getorganizationfleet.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.fleet.getOrganization(orgId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.cloud.getWhiteLabelCatalog();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/catalog"
+      },
+      "members": {
+        "flat": "getWhiteLabelCloudCatalog",
+        "resource": "cloud.getWhiteLabelCatalog"
+      },
+      "operation_id": "getWhiteLabelCloudCatalog",
+      "parameters": [],
+      "reference_page": "operations/cloud/getwhitelabelcloudcatalog.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "WhiteLabelCloudCatalog",
+              "media_type": "application/json",
+              "type_refs": [
+                "WhiteLabelCloudCatalog"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.cloud.getWhiteLabelCatalog(requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.inspectProject({\"projectRoot\": \"example\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/inspect"
+      },
+      "members": {
+        "flat": "inspectProject",
+        "resource": "jobs.inspectProject"
+      },
+      "operation_id": "inspectProject",
+      "parameters": [],
+      "reference_page": "operations/jobs/inspectproject.md",
+      "request_body": {
+        "contract_type": "InspectProjectRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "InspectProjectRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProjectInspectionPlan",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProjectInspectionPlan"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.inspectProject(body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.system.listCapabilities();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/capabilities"
+      },
+      "members": {
+        "flat": "listCapabilities",
+        "resource": "system.listCapabilities"
+      },
+      "operation_id": "listCapabilities",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "query",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "state",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/listcapabilities.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CapabilitiesResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CapabilitiesResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.system.listCapabilities(query?, state?, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.cloud.listBoxes();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "flat": "listCloudBoxes",
+        "resource": "cloud.listBoxes"
+      },
+      "operation_id": "listCloudBoxes",
+      "parameters": [],
+      "reference_page": "operations/cloud/listcloudboxes.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.cloud.listBoxes(requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.list();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "flat": "listJobs",
+        "resource": "jobs.list"
+      },
+      "operation_id": "listJobs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "status",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "boxId",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "integer",
+          "in": "query",
+          "name": "limit",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/listjobs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.jobs.list(status?, boxId?, limit?, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.fleet.listOrganizationMembers(\"example\");",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "flat": "listOrganizationMembers",
+        "resource": "fleet.listOrganizationMembers"
+      },
+      "operation_id": "listOrganizationMembers",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/listorganizationmembers.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMembersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMembersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.fleet.listOrganizationMembers(orgId, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.system.listProviders();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/providers"
+      },
+      "members": {
+        "flat": "listProviders",
+        "resource": "system.listProviders"
+      },
+      "operation_id": "listProviders",
+      "parameters": [],
+      "reference_page": "operations/system/listproviders.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProvidersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProvidersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.system.listProviders(requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.fleet.listSaasPlans();",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "GET",
+        "path": "/v1/saas/plans"
+      },
+      "members": {
+        "flat": "listSaasPlans",
+        "resource": "fleet.listSaasPlans"
+      },
+      "operation_id": "listSaasPlans",
+      "parameters": [],
+      "reference_page": "operations/fleet/listsaasplans.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SaasPlansResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SaasPlansResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.fleet.listSaasPlans(requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.cloud.performBoxAction(\"example\", {\"action\": \"suspend\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/action"
+      },
+      "members": {
+        "flat": "performCloudBoxAction",
+        "resource": "cloud.performBoxAction"
+      },
+      "operation_id": "performCloudBoxAction",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/performcloudboxaction.md",
+      "request_body": {
+        "contract_type": "CloudBoxActionRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CloudBoxActionRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxActionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxActionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.cloud.performBoxAction(boxId, body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.startAgent({\"projectRoot\": \"example\", \"task\": \"example\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/agent-jobs"
+      },
+      "members": {
+        "flat": "startAgentJob",
+        "resource": "jobs.startAgent"
+      },
+      "operation_id": "startAgentJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startagentjob.md",
+      "request_body": {
+        "contract_type": "StartAgentJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartAgentJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "client.jobs.startAgent(body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.startGithub({\"repository\": \"example\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/github-jobs"
+      },
+      "members": {
+        "flat": "startGithubJob",
+        "resource": "jobs.startGithub"
+      },
+      "operation_id": "startGithubJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startgithubjob.md",
+      "request_body": {
+        "contract_type": "StartGithubJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartGithubJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "client.jobs.startGithub(body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.jobs.startProject({\"projectRoot\": \"example\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "flat": "startProjectJob",
+        "resource": "jobs.startProject"
+      },
+      "operation_id": "startProjectJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startprojectjob.md",
+      "request_body": {
+        "contract_type": "StartProjectJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartProjectJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "client.jobs.startProject(body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.cloud.syncBoxVault(\"example\", {\"keys\": [\"example\"]}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/vault"
+      },
+      "members": {
+        "flat": "syncCloudBoxVault",
+        "resource": "cloud.syncBoxVault"
+      },
+      "operation_id": "syncCloudBoxVault",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/synccloudboxvault.md",
+      "request_body": {
+        "contract_type": "SyncCloudBoxVaultRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "SyncCloudBoxVaultRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SyncCloudBoxVaultResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SyncCloudBoxVaultResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.cloud.syncBoxVault(boxId, body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.fleet.updateOrganizationPolicy(\"example\", {}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "PUT",
+        "path": "/v1/organizations/{orgId}/fleet/policy"
+      },
+      "members": {
+        "flat": "updateOrganizationFleetPolicy",
+        "resource": "fleet.updateOrganizationPolicy"
+      },
+      "operation_id": "updateOrganizationFleetPolicy",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/updateorganizationfleetpolicy.md",
+      "request_body": {
+        "contract_type": "FleetPolicyUpdateRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "FleetPolicyUpdateRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.fleet.updateOrganizationPolicy(orgId, body, requestOptions?)"
+    },
+    {
+      "deprecated": false,
+      "example": {
+        "code": "const result = await client.fleet.upsertOrganizationMember(\"example\", {\"email\": \"example\", \"role\": \"owner\", \"userId\": \"example\"}, { contentType: \"application/json\" });",
+        "kind": "illustrative-not-executed",
+        "language": "javascript"
+      },
+      "http": {
+        "method": "POST",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "flat": "upsertOrganizationMember",
+        "resource": "fleet.upsertOrganizationMember"
+      },
+      "operation_id": "upsertOrganizationMember",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/upsertorganizationmember.md",
+      "request_body": {
+        "contract_type": "UpsertOrganizationMemberRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "UpsertOrganizationMemberRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMember",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMember"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "client.fleet.upsertOrganizationMember(orgId, body, requestOptions?)"
+    }
+  ],
+  "package": {
+    "group": null,
+    "name": "boxfleet-sdk",
+    "version": "0.3.0"
+  },
+  "package_unavailable_reason": null,
+  "provenance": {
+    "api_version": "0.3.0",
+    "artifact_manifest": "../../sdk/javascript/boxfleet-sdk/omniwrap-artifact.json",
+    "artifact_manifest_sha256": "702de30e4f323326bc7dfd2c1397dcb8d9e21419fe1ac077c0fe95d4341c6e20",
+    "artifact_type": "javascript-sdk",
+    "contract_fingerprint": "17dde1a898058b32e5704774b765a51c2bcf12bdd04ec3805d6b6804ac5ae7fa",
+    "generator": {
+      "name": "omniwrap",
+      "renderer_edition": 1,
+      "version": "2.0.0"
+    },
+    "maturity": "verified",
+    "semantic_ir_version": "1.14.0"
+  },
+  "types": [
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CapabilitiesResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxEnvelope"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CreateCloudBoxRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "FleetPolicyUpdateRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "HealthResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "InspectProjectRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobExecutionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobLogsResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobSummary"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ModsCatalogResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationFleetResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMember"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMembersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProjectInspectionPlan"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProvidersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SaasPlansResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartAgentJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartGithubJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartProjectJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "UpsertOrganizationMemberRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "WhiteLabelCloudCatalog"
+    }
+  ],
+  "unavailable_reason": null,
+  "version": "1.0.0"
+}

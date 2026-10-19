@@ -1,0 +1,4 @@
+interface:
+  display_name: "boxfleet Library"
+  short_description: "Build confidently with boxfleet"
+  default_prompt: "Use $use-boxfleet to implement a correct boxfleet integration."

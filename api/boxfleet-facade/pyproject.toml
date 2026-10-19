@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boxfleet-facade"
+version = "0.3.0"
+description = "Generated REST facade for BoxFleet"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools.package-data]
+"boxfleet_facade" = ["semantic-api.json"]

@@ -1,0 +1,1055 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/facade-contract-tests/v1.json",
+  "cases": [
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "jobId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "cancelJob",
+      "path": "/v1/jobs/contract/cancel",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "boxId": "contract",
+        "completedAt": "contract",
+        "createdAt": "contract",
+        "exitCode": 0,
+        "id": "contract",
+        "provider": "contract",
+        "status": "queued"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "autoSuspendSeconds": 60,
+          "backend": "cloudflare-sandbox",
+          "name": "contract",
+          "onTimeout": "pause",
+          "templateId": "boxfleet-universal",
+          "vault": true
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": {
+        "autoSuspendSeconds": 60,
+        "backend": "cloudflare-sandbox",
+        "name": "contract",
+        "onTimeout": "pause",
+        "templateId": "boxfleet-universal",
+        "vault": true
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "createCloudBox",
+      "path": "/v1/cloud/boxes",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "box": {
+          "autoSuspendSeconds": 0,
+          "boxId": "contract",
+          "desktopStreamUrl": "contract",
+          "id": "contract",
+          "name": "contract",
+          "previewUrlPattern": "contract",
+          "provider": "contract",
+          "state": "running",
+          "templateId": "contract",
+          "tmpfsVaultPath": "contract",
+          "whiteLabelBroker": {
+            "backendId": "contract",
+            "idleCostUsdPerHour": 0.0,
+            "isolation": "contract",
+            "provisioningMode": "contract",
+            "wholesaleActiveUsdPerHour": 0.0
+          }
+        },
+        "organizationId": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 201,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "describeAgentMods",
+      "path": "/v1/mods",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "schema": "contract",
+        "summary": {
+          "mcpPromptsCount": 0,
+          "mcpResourceTemplatesCount": 0,
+          "skillsCount": 0,
+          "totalTargets": 0
+        },
+        "targets": {}
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getHealth",
+      "path": "/health",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "ok": false,
+        "service": "contract",
+        "version": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "jobId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getJobExecution",
+      "path": "/v1/jobs/contract/execution",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "exitCode": 0,
+        "id": "contract",
+        "patch": "contract",
+        "rounds": [
+          {}
+        ],
+        "status": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "jobId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getJobLogs",
+      "path": "/v1/jobs/contract/logs",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "id": "contract",
+        "stderr": "contract",
+        "stdout": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "jobId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getJobStatus",
+      "path": "/v1/jobs/contract",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "boxId": "contract",
+        "completedAt": "contract",
+        "createdAt": "contract",
+        "exitCode": 0,
+        "id": "contract",
+        "provider": "contract",
+        "status": "queued"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "orgId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getOrganizationFleet",
+      "path": "/v1/organizations/contract/fleet",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "boxes": [
+          {
+            "autoSuspendSeconds": 0,
+            "boxId": "contract",
+            "desktopStreamUrl": "contract",
+            "id": "contract",
+            "name": "contract",
+            "previewUrlPattern": "contract",
+            "provider": "contract",
+            "state": "running",
+            "templateId": "contract",
+            "tmpfsVaultPath": "contract",
+            "whiteLabelBroker": {
+              "backendId": "contract",
+              "idleCostUsdPerHour": 0.0,
+              "isolation": "contract",
+              "provisioningMode": "contract",
+              "wholesaleActiveUsdPerHour": 0.0
+            }
+          }
+        ],
+        "organizationId": "contract",
+        "policy": {},
+        "summary": {}
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "getWhiteLabelCloudCatalog",
+      "path": "/v1/cloud/catalog",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "backends": [
+          {
+            "activeVcpuUsdPerSecond": 0.0,
+            "coldBootMs": 0,
+            "id": "contract",
+            "idleComputeUsdPerSecond": 0.0,
+            "isolation": "contract",
+            "name": "contract"
+          }
+        ],
+        "brand": "contract",
+        "domain": "contract",
+        "previewDomainPattern": "contract",
+        "schema": "contract",
+        "templates": [
+          {
+            "description": "contract",
+            "gpu": false,
+            "id": "contract",
+            "name": "contract"
+          }
+        ],
+        "zeroIdleCostModel": {
+          "billingGranularity": "contract",
+          "fixedIdleInfrastructureCostUsd": 0.0,
+          "idleMechanism": "contract"
+        }
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "package": "contract",
+          "projectRoot": "contract"
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": {
+        "package": "contract",
+        "projectRoot": "contract"
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "inspectProject",
+      "path": "/v1/inspect",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "buildCommand": "contract",
+        "kind": "contract",
+        "packageManager": "contract",
+        "projectRoot": "contract",
+        "runtime": "contract",
+        "testCommand": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listCapabilities",
+      "path": "/v1/capabilities",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "capabilities": [
+          {
+            "category": "contract",
+            "id": "contract",
+            "state": "contract",
+            "summary": "contract"
+          }
+        ],
+        "jobLimits": {}
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listCloudBoxes",
+      "path": "/v1/cloud/boxes",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "boxes": [
+          {
+            "autoSuspendSeconds": 0,
+            "boxId": "contract",
+            "desktopStreamUrl": "contract",
+            "id": "contract",
+            "name": "contract",
+            "previewUrlPattern": "contract",
+            "provider": "contract",
+            "state": "running",
+            "templateId": "contract",
+            "tmpfsVaultPath": "contract",
+            "whiteLabelBroker": {
+              "backendId": "contract",
+              "idleCostUsdPerHour": 0.0,
+              "isolation": "contract",
+              "provisioningMode": "contract",
+              "wholesaleActiveUsdPerHour": 0.0
+            }
+          }
+        ],
+        "organizationId": "contract",
+        "provider": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listJobs",
+      "path": "/v1/jobs",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "jobs": [
+          {
+            "boxId": "contract",
+            "completedAt": "contract",
+            "createdAt": "contract",
+            "exitCode": 0,
+            "id": "contract",
+            "provider": "contract",
+            "status": "queued"
+          }
+        ],
+        "nextCursor": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "orgId": "contract"
+        },
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listOrganizationMembers",
+      "path": "/v1/organizations/contract/members",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "members": [
+          {
+            "email": "contract",
+            "maxBoxes": 0,
+            "role": "owner",
+            "userId": "contract"
+          }
+        ],
+        "organizationId": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listProviders",
+      "path": "/v1/providers",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "providers": [
+          {
+            "name": "contract",
+            "templates": [
+              {
+                "id": "contract",
+                "runtimes": [
+                  "contract"
+                ]
+              }
+            ],
+            "type": "contract"
+          }
+        ]
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": null,
+      "body_present": false,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "GET",
+      "operation_id": "listSaasPlans",
+      "path": "/v1/saas/plans",
+      "query": [],
+      "request_media_type": null,
+      "response_body": {
+        "product": "contract",
+        "tiers": [
+          {
+            "id": "contract",
+            "monthlyPriceUsd": 0.0,
+            "name": "contract"
+          }
+        ]
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "action": "suspend",
+          "name": "contract",
+          "port": 1,
+          "viewOnly": true
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "boxId": "contract"
+        },
+        "query": {}
+      },
+      "body": {
+        "action": "suspend",
+        "name": "contract",
+        "port": 1,
+        "viewOnly": true
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "performCloudBoxAction",
+      "path": "/v1/cloud/boxes/contract/action",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "action": "contract",
+        "boxId": "contract",
+        "organizationId": "contract",
+        "port": 0,
+        "snapshotId": "contract",
+        "state": "contract",
+        "url": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "maxRounds": 1,
+          "model": "contract",
+          "modelBackend": "claude-cli",
+          "projectRoot": "contract",
+          "provider": "contract",
+          "task": "contract",
+          "verificationCommand": "contract"
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": {
+        "maxRounds": 1,
+        "model": "contract",
+        "modelBackend": "claude-cli",
+        "projectRoot": "contract",
+        "provider": "contract",
+        "task": "contract",
+        "verificationCommand": "contract"
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "startAgentJob",
+      "path": "/v1/agent-jobs",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "boxId": "contract",
+        "completedAt": "contract",
+        "createdAt": "contract",
+        "exitCode": 0,
+        "id": "contract",
+        "provider": "contract",
+        "status": "queued"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 201,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "command": "contract",
+          "install": false,
+          "push": true,
+          "ref": "contract",
+          "repository": "contract",
+          "task": "contract"
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": {
+        "command": "contract",
+        "install": false,
+        "push": true,
+        "ref": "contract",
+        "repository": "contract",
+        "task": "contract"
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "startGithubJob",
+      "path": "/v1/github-jobs",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "boxId": "contract",
+        "completedAt": "contract",
+        "createdAt": "contract",
+        "exitCode": 0,
+        "id": "contract",
+        "provider": "contract",
+        "status": "queued"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 201,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "action": "test",
+          "command": "contract",
+          "install": true,
+          "keepBox": false,
+          "projectRoot": "contract",
+          "provider": "contract",
+          "resumeJobId": "contract",
+          "templateId": "contract",
+          "timeoutSeconds": 1
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {},
+        "query": {}
+      },
+      "body": {
+        "action": "test",
+        "command": "contract",
+        "install": true,
+        "keepBox": false,
+        "projectRoot": "contract",
+        "provider": "contract",
+        "resumeJobId": "contract",
+        "templateId": "contract",
+        "timeoutSeconds": 1
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "startProjectJob",
+      "path": "/v1/jobs",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "boxId": "contract",
+        "completedAt": "contract",
+        "createdAt": "contract",
+        "exitCode": 0,
+        "id": "contract",
+        "provider": "contract",
+        "status": "queued"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 201,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "keys": [
+            "contract"
+          ]
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "boxId": "contract"
+        },
+        "query": {}
+      },
+      "body": {
+        "keys": [
+          "contract"
+        ]
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "syncCloudBoxVault",
+      "path": "/v1/cloud/boxes/contract/vault",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "boxId": "contract",
+        "excludedFromSnapshots": true,
+        "keys": [
+          "contract"
+        ],
+        "mountPath": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "allowedProviders": [
+            "contract"
+          ],
+          "defaultAutoStopMinutes": 0,
+          "enforceSso": false,
+          "maxBoxesPerMember": 0,
+          "requireSignedSnapshots": false
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "orgId": "contract"
+        },
+        "query": {}
+      },
+      "body": {
+        "allowedProviders": [
+          "contract"
+        ],
+        "defaultAutoStopMinutes": 0,
+        "enforceSso": false,
+        "maxBoxesPerMember": 0,
+        "requireSignedSnapshots": false
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "PUT",
+      "operation_id": "updateOrganizationFleetPolicy",
+      "path": "/v1/organizations/contract/fleet/policy",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "boxes": [
+          {
+            "autoSuspendSeconds": 0,
+            "boxId": "contract",
+            "desktopStreamUrl": "contract",
+            "id": "contract",
+            "name": "contract",
+            "previewUrlPattern": "contract",
+            "provider": "contract",
+            "state": "running",
+            "templateId": "contract",
+            "tmpfsVaultPath": "contract",
+            "whiteLabelBroker": {
+              "backendId": "contract",
+              "idleCostUsdPerHour": 0.0,
+              "isolation": "contract",
+              "provisioningMode": "contract",
+              "wholesaleActiveUsdPerHour": 0.0
+            }
+          }
+        ],
+        "organizationId": "contract",
+        "policy": {},
+        "summary": {}
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    },
+    {
+      "arguments": {
+        "body": {
+          "email": "contract",
+          "maxBoxes": 0,
+          "role": "owner",
+          "userId": "contract"
+        },
+        "cookies": {},
+        "headers": {},
+        "path": {
+          "orgId": "contract"
+        },
+        "query": {}
+      },
+      "body": {
+        "email": "contract",
+        "maxBoxes": 0,
+        "role": "owner",
+        "userId": "contract"
+      },
+      "body_present": true,
+      "cookies": {},
+      "diagnostics": [],
+      "headers": {},
+      "method": "POST",
+      "operation_id": "upsertOrganizationMember",
+      "path": "/v1/organizations/contract/members",
+      "query": [],
+      "request_media_type": "application/json",
+      "response_body": {
+        "email": "contract",
+        "maxBoxes": 0,
+        "role": "owner",
+        "userId": "contract"
+      },
+      "response_body_present": true,
+      "response_media_type": "application/json",
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "status": 200,
+      "streaming": null
+    }
+  ],
+  "contract_fingerprint": "17dde1a898058b32e5704774b765a51c2bcf12bdd04ec3805d6b6804ac5ae7fa",
+  "contract_test_version": "1.0.0",
+  "pack_sha256": "6f5ba831f81dc02557a961f7ab027f85f8782056033e83b1171a4a225abe7991"
+}

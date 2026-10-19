@@ -1,0 +1,20 @@
+image: python:3.11
+
+variables:
+  OMNIWRAP_SOURCE: "boxfleet.openapi.yaml"
+  OMNIWRAP_OUTPUT: ".omniwrap-ci"
+
+omniwrap-complete:
+  before_script:
+    - python -m pip install "omniwrap==2.0.0"
+  script:
+    - omniwrap doctor --complete --renderer dotnet
+    - omniwrap doctor --complete --renderer go
+    - omniwrap doctor --complete --renderer java
+    - omniwrap doctor --complete --renderer javascript
+    - omniwrap doctor --complete --renderer kotlin
+    - omniwrap doctor --complete --renderer python
+    - omniwrap doctor --complete --renderer rust
+    - omniwrap doctor --complete --renderer typescript
+    - omniwrap create "$OMNIWRAP_SOURCE" --sdk dotnet --sdk go --sdk java --sdk javascript --sdk kotlin --sdk python --sdk rust --sdk typescript --input-kind openapi --mode http_client --complete --verify --replace-existing --no-config --out "$OMNIWRAP_OUTPUT"
+    - python -m unittest discover -s "$OMNIWRAP_OUTPUT/tests"

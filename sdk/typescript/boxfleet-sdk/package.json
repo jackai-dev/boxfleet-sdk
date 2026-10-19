@@ -1,0 +1,68 @@
+{
+  "name": "boxfleet-sdk",
+  "version": "0.3.0",
+  "omniwrap": {
+    "sourceVersion": "0.3.0"
+  },
+  "main": "./index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "README.md",
+    "api.md",
+    "omniwrap-artifact.json",
+    "index.d.ts",
+    "client.d.ts",
+    "client.js",
+    "core/descriptors.d.ts",
+    "core/descriptors.js",
+    "core/runtime.d.ts",
+    "core/runtime.js",
+    "error.d.ts",
+    "error.js",
+    "models.d.ts",
+    "models.js",
+    "resources/cloud.d.ts",
+    "resources/cloud.js",
+    "resources/fleet.d.ts",
+    "resources/fleet.js",
+    "resources/index.d.ts",
+    "resources/index.js",
+    "resources/jobs.d.ts",
+    "resources/jobs.js",
+    "resources/system.d.ts",
+    "resources/system.js",
+    "src/client.ts",
+    "src/core/descriptors.ts",
+    "src/core/runtime.ts",
+    "src/error.ts",
+    "src/index.ts",
+    "src/models.ts",
+    "src/resources/cloud.ts",
+    "src/resources/fleet.ts",
+    "src/resources/index.ts",
+    "src/resources/jobs.ts",
+    "src/resources/system.ts",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "types": "./index.d.ts",
+  "license": "UNLICENSED"
+}

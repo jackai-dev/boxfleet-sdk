@@ -1,0 +1,1086 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/sdk-documentation-metadata/v1.json",
+  "availability": "available",
+  "language": "java",
+  "member_source": "renderer-naming",
+  "operations": [
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs/{jobId}/cancel"
+      },
+      "members": {
+        "async": "cancelJobAsync",
+        "sync": "cancelJob"
+      },
+      "operation_id": "cancelJob",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/canceljob.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public JobSummary cancelJob(String jobId)\npublic ApiResponse<JobSummary> cancelJobWithResponse(String jobId)\npublic CompletableFuture<ApiResponse<JobSummary>> cancelJobWithResponseAsync(String jobId)\npublic CompletableFuture<JobSummary> cancelJobAsync(String jobId)\npublic JobSummary cancelJob(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<JobSummary> cancelJobAsync(String jobId, RequestOptions requestOptions)\npublic ApiResponse<JobSummary> cancelJobWithResponse(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobSummary>> cancelJobWithResponseAsync(String jobId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "async": "createCloudBoxAsync",
+        "sync": "createCloudBox"
+      },
+      "operation_id": "createCloudBox",
+      "parameters": [],
+      "reference_page": "operations/cloud/createcloudbox.md",
+      "request_body": {
+        "contract_type": "CreateCloudBoxRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CreateCloudBoxRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxEnvelope",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxEnvelope"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public CloudBoxEnvelope createCloudBox(CreateCloudBoxRequest body)\npublic ApiResponse<CloudBoxEnvelope> createCloudBoxWithResponse(CreateCloudBoxRequest body)\npublic CompletableFuture<ApiResponse<CloudBoxEnvelope>> createCloudBoxWithResponseAsync(CreateCloudBoxRequest body)\npublic CompletableFuture<CloudBoxEnvelope> createCloudBoxAsync(CreateCloudBoxRequest body)\npublic CloudBoxEnvelope createCloudBox(CreateCloudBoxRequest body, RequestOptions requestOptions)\npublic CompletableFuture<CloudBoxEnvelope> createCloudBoxAsync(CreateCloudBoxRequest body, RequestOptions requestOptions)\npublic ApiResponse<CloudBoxEnvelope> createCloudBoxWithResponse(CreateCloudBoxRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<CloudBoxEnvelope>> createCloudBoxWithResponseAsync(CreateCloudBoxRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/mods"
+      },
+      "members": {
+        "async": "describeAgentModsAsync",
+        "sync": "describeAgentMods"
+      },
+      "operation_id": "describeAgentMods",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "target",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/describeagentmods.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ModsCatalogResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ModsCatalogResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public ModsCatalogResponse describeAgentMods()\npublic ApiResponse<ModsCatalogResponse> describeAgentModsWithResponse()\npublic CompletableFuture<ApiResponse<ModsCatalogResponse>> describeAgentModsWithResponseAsync()\npublic CompletableFuture<ModsCatalogResponse> describeAgentModsAsync()\npublic ModsCatalogResponse describeAgentMods(RequestOptions requestOptions)\npublic ApiResponse<ModsCatalogResponse> describeAgentModsWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<ModsCatalogResponse>> describeAgentModsWithResponseAsync(RequestOptions requestOptions)\npublic CompletableFuture<ModsCatalogResponse> describeAgentModsAsync(RequestOptions requestOptions)\npublic ModsCatalogResponse describeAgentMods(String target)\npublic ApiResponse<ModsCatalogResponse> describeAgentModsWithResponse(String target)\npublic CompletableFuture<ApiResponse<ModsCatalogResponse>> describeAgentModsWithResponseAsync(String target)\npublic CompletableFuture<ModsCatalogResponse> describeAgentModsAsync(String target)\npublic ModsCatalogResponse describeAgentMods(String target, RequestOptions requestOptions)\npublic CompletableFuture<ModsCatalogResponse> describeAgentModsAsync(String target, RequestOptions requestOptions)\npublic ApiResponse<ModsCatalogResponse> describeAgentModsWithResponse(String target, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<ModsCatalogResponse>> describeAgentModsWithResponseAsync(String target, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/health"
+      },
+      "members": {
+        "async": "getHealthAsync",
+        "sync": "getHealth"
+      },
+      "operation_id": "getHealth",
+      "parameters": [],
+      "reference_page": "operations/system/gethealth.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "HealthResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "HealthResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public HealthResponse getHealth()\npublic ApiResponse<HealthResponse> getHealthWithResponse()\npublic CompletableFuture<ApiResponse<HealthResponse>> getHealthWithResponseAsync()\npublic CompletableFuture<HealthResponse> getHealthAsync()\npublic HealthResponse getHealth(RequestOptions requestOptions)\npublic CompletableFuture<HealthResponse> getHealthAsync(RequestOptions requestOptions)\npublic ApiResponse<HealthResponse> getHealthWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<HealthResponse>> getHealthWithResponseAsync(RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/execution"
+      },
+      "members": {
+        "async": "getJobExecutionAsync",
+        "sync": "getJobExecution"
+      },
+      "operation_id": "getJobExecution",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobexecution.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobExecutionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobExecutionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public JobExecutionResponse getJobExecution(String jobId)\npublic ApiResponse<JobExecutionResponse> getJobExecutionWithResponse(String jobId)\npublic CompletableFuture<ApiResponse<JobExecutionResponse>> getJobExecutionWithResponseAsync(String jobId)\npublic CompletableFuture<JobExecutionResponse> getJobExecutionAsync(String jobId)\npublic JobExecutionResponse getJobExecution(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<JobExecutionResponse> getJobExecutionAsync(String jobId, RequestOptions requestOptions)\npublic ApiResponse<JobExecutionResponse> getJobExecutionWithResponse(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobExecutionResponse>> getJobExecutionWithResponseAsync(String jobId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/logs"
+      },
+      "members": {
+        "async": "getJobLogsAsync",
+        "sync": "getJobLogs"
+      },
+      "operation_id": "getJobLogs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjoblogs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobLogsResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobLogsResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public JobLogsResponse getJobLogs(String jobId)\npublic ApiResponse<JobLogsResponse> getJobLogsWithResponse(String jobId)\npublic CompletableFuture<ApiResponse<JobLogsResponse>> getJobLogsWithResponseAsync(String jobId)\npublic CompletableFuture<JobLogsResponse> getJobLogsAsync(String jobId)\npublic JobLogsResponse getJobLogs(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<JobLogsResponse> getJobLogsAsync(String jobId, RequestOptions requestOptions)\npublic ApiResponse<JobLogsResponse> getJobLogsWithResponse(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobLogsResponse>> getJobLogsWithResponseAsync(String jobId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}"
+      },
+      "members": {
+        "async": "getJobStatusAsync",
+        "sync": "getJobStatus"
+      },
+      "operation_id": "getJobStatus",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobstatus.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public JobSummary getJobStatus(String jobId)\npublic ApiResponse<JobSummary> getJobStatusWithResponse(String jobId)\npublic CompletableFuture<ApiResponse<JobSummary>> getJobStatusWithResponseAsync(String jobId)\npublic CompletableFuture<JobSummary> getJobStatusAsync(String jobId)\npublic JobSummary getJobStatus(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<JobSummary> getJobStatusAsync(String jobId, RequestOptions requestOptions)\npublic ApiResponse<JobSummary> getJobStatusWithResponse(String jobId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobSummary>> getJobStatusWithResponseAsync(String jobId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/fleet"
+      },
+      "members": {
+        "async": "getOrganizationFleetAsync",
+        "sync": "getOrganizationFleet"
+      },
+      "operation_id": "getOrganizationFleet",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/getorganizationfleet.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public OrganizationFleetResponse getOrganizationFleet(String orgId)\npublic ApiResponse<OrganizationFleetResponse> getOrganizationFleetWithResponse(String orgId)\npublic CompletableFuture<ApiResponse<OrganizationFleetResponse>> getOrganizationFleetWithResponseAsync(String orgId)\npublic CompletableFuture<OrganizationFleetResponse> getOrganizationFleetAsync(String orgId)\npublic OrganizationFleetResponse getOrganizationFleet(String orgId, RequestOptions requestOptions)\npublic CompletableFuture<OrganizationFleetResponse> getOrganizationFleetAsync(String orgId, RequestOptions requestOptions)\npublic ApiResponse<OrganizationFleetResponse> getOrganizationFleetWithResponse(String orgId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<OrganizationFleetResponse>> getOrganizationFleetWithResponseAsync(String orgId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/catalog"
+      },
+      "members": {
+        "async": "getWhiteLabelCloudCatalogAsync",
+        "sync": "getWhiteLabelCloudCatalog"
+      },
+      "operation_id": "getWhiteLabelCloudCatalog",
+      "parameters": [],
+      "reference_page": "operations/cloud/getwhitelabelcloudcatalog.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "WhiteLabelCloudCatalog",
+              "media_type": "application/json",
+              "type_refs": [
+                "WhiteLabelCloudCatalog"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public WhiteLabelCloudCatalog getWhiteLabelCloudCatalog()\npublic ApiResponse<WhiteLabelCloudCatalog> getWhiteLabelCloudCatalogWithResponse()\npublic CompletableFuture<ApiResponse<WhiteLabelCloudCatalog>> getWhiteLabelCloudCatalogWithResponseAsync()\npublic CompletableFuture<WhiteLabelCloudCatalog> getWhiteLabelCloudCatalogAsync()\npublic WhiteLabelCloudCatalog getWhiteLabelCloudCatalog(RequestOptions requestOptions)\npublic CompletableFuture<WhiteLabelCloudCatalog> getWhiteLabelCloudCatalogAsync(RequestOptions requestOptions)\npublic ApiResponse<WhiteLabelCloudCatalog> getWhiteLabelCloudCatalogWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<WhiteLabelCloudCatalog>> getWhiteLabelCloudCatalogWithResponseAsync(RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/inspect"
+      },
+      "members": {
+        "async": "inspectProjectAsync",
+        "sync": "inspectProject"
+      },
+      "operation_id": "inspectProject",
+      "parameters": [],
+      "reference_page": "operations/jobs/inspectproject.md",
+      "request_body": {
+        "contract_type": "InspectProjectRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "InspectProjectRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProjectInspectionPlan",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProjectInspectionPlan"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public ProjectInspectionPlan inspectProject(InspectProjectRequest body)\npublic ApiResponse<ProjectInspectionPlan> inspectProjectWithResponse(InspectProjectRequest body)\npublic CompletableFuture<ApiResponse<ProjectInspectionPlan>> inspectProjectWithResponseAsync(InspectProjectRequest body)\npublic CompletableFuture<ProjectInspectionPlan> inspectProjectAsync(InspectProjectRequest body)\npublic ProjectInspectionPlan inspectProject(InspectProjectRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ProjectInspectionPlan> inspectProjectAsync(InspectProjectRequest body, RequestOptions requestOptions)\npublic ApiResponse<ProjectInspectionPlan> inspectProjectWithResponse(InspectProjectRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<ProjectInspectionPlan>> inspectProjectWithResponseAsync(InspectProjectRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/capabilities"
+      },
+      "members": {
+        "async": "listCapabilitiesAsync",
+        "sync": "listCapabilities"
+      },
+      "operation_id": "listCapabilities",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "query",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "state",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/listcapabilities.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CapabilitiesResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CapabilitiesResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public CapabilitiesResponse listCapabilities()\npublic ApiResponse<CapabilitiesResponse> listCapabilitiesWithResponse()\npublic CompletableFuture<ApiResponse<CapabilitiesResponse>> listCapabilitiesWithResponseAsync()\npublic CompletableFuture<CapabilitiesResponse> listCapabilitiesAsync()\npublic CapabilitiesResponse listCapabilities(RequestOptions requestOptions)\npublic ApiResponse<CapabilitiesResponse> listCapabilitiesWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<CapabilitiesResponse>> listCapabilitiesWithResponseAsync(RequestOptions requestOptions)\npublic CompletableFuture<CapabilitiesResponse> listCapabilitiesAsync(RequestOptions requestOptions)\npublic CapabilitiesResponse listCapabilities(String queryValue, String state)\npublic ApiResponse<CapabilitiesResponse> listCapabilitiesWithResponse(String queryValue, String state)\npublic CompletableFuture<ApiResponse<CapabilitiesResponse>> listCapabilitiesWithResponseAsync(String queryValue, String state)\npublic CompletableFuture<CapabilitiesResponse> listCapabilitiesAsync(String queryValue, String state)\npublic CapabilitiesResponse listCapabilities(String queryValue, String state, RequestOptions requestOptions)\npublic CompletableFuture<CapabilitiesResponse> listCapabilitiesAsync(String queryValue, String state, RequestOptions requestOptions)\npublic ApiResponse<CapabilitiesResponse> listCapabilitiesWithResponse(String queryValue, String state, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<CapabilitiesResponse>> listCapabilitiesWithResponseAsync(String queryValue, String state, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "async": "listCloudBoxesAsync",
+        "sync": "listCloudBoxes"
+      },
+      "operation_id": "listCloudBoxes",
+      "parameters": [],
+      "reference_page": "operations/cloud/listcloudboxes.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public CloudBoxListResponse listCloudBoxes()\npublic ApiResponse<CloudBoxListResponse> listCloudBoxesWithResponse()\npublic CompletableFuture<ApiResponse<CloudBoxListResponse>> listCloudBoxesWithResponseAsync()\npublic CompletableFuture<CloudBoxListResponse> listCloudBoxesAsync()\npublic CloudBoxListResponse listCloudBoxes(RequestOptions requestOptions)\npublic CompletableFuture<CloudBoxListResponse> listCloudBoxesAsync(RequestOptions requestOptions)\npublic ApiResponse<CloudBoxListResponse> listCloudBoxesWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<CloudBoxListResponse>> listCloudBoxesWithResponseAsync(RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "async": "listJobsAsync",
+        "sync": "listJobs"
+      },
+      "operation_id": "listJobs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "status",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "boxId",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "integer",
+          "in": "query",
+          "name": "limit",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/listjobs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public JobListResponse listJobs()\npublic ApiResponse<JobListResponse> listJobsWithResponse()\npublic CompletableFuture<ApiResponse<JobListResponse>> listJobsWithResponseAsync()\npublic CompletableFuture<JobListResponse> listJobsAsync()\npublic JobListResponse listJobs(RequestOptions requestOptions)\npublic ApiResponse<JobListResponse> listJobsWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobListResponse>> listJobsWithResponseAsync(RequestOptions requestOptions)\npublic CompletableFuture<JobListResponse> listJobsAsync(RequestOptions requestOptions)\npublic JobListResponse listJobs(String status, String boxId, Long limit)\npublic ApiResponse<JobListResponse> listJobsWithResponse(String status, String boxId, Long limit)\npublic CompletableFuture<ApiResponse<JobListResponse>> listJobsWithResponseAsync(String status, String boxId, Long limit)\npublic CompletableFuture<JobListResponse> listJobsAsync(String status, String boxId, Long limit)\npublic JobListResponse listJobs(String status, String boxId, Long limit, RequestOptions requestOptions)\npublic CompletableFuture<JobListResponse> listJobsAsync(String status, String boxId, Long limit, RequestOptions requestOptions)\npublic ApiResponse<JobListResponse> listJobsWithResponse(String status, String boxId, Long limit, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobListResponse>> listJobsWithResponseAsync(String status, String boxId, Long limit, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "async": "listOrganizationMembersAsync",
+        "sync": "listOrganizationMembers"
+      },
+      "operation_id": "listOrganizationMembers",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/listorganizationmembers.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMembersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMembersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public OrganizationMembersResponse listOrganizationMembers(String orgId)\npublic ApiResponse<OrganizationMembersResponse> listOrganizationMembersWithResponse(String orgId)\npublic CompletableFuture<ApiResponse<OrganizationMembersResponse>> listOrganizationMembersWithResponseAsync(String orgId)\npublic CompletableFuture<OrganizationMembersResponse> listOrganizationMembersAsync(String orgId)\npublic OrganizationMembersResponse listOrganizationMembers(String orgId, RequestOptions requestOptions)\npublic CompletableFuture<OrganizationMembersResponse> listOrganizationMembersAsync(String orgId, RequestOptions requestOptions)\npublic ApiResponse<OrganizationMembersResponse> listOrganizationMembersWithResponse(String orgId, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<OrganizationMembersResponse>> listOrganizationMembersWithResponseAsync(String orgId, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/providers"
+      },
+      "members": {
+        "async": "listProvidersAsync",
+        "sync": "listProviders"
+      },
+      "operation_id": "listProviders",
+      "parameters": [],
+      "reference_page": "operations/system/listproviders.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProvidersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProvidersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public ProvidersResponse listProviders()\npublic ApiResponse<ProvidersResponse> listProvidersWithResponse()\npublic CompletableFuture<ApiResponse<ProvidersResponse>> listProvidersWithResponseAsync()\npublic CompletableFuture<ProvidersResponse> listProvidersAsync()\npublic ProvidersResponse listProviders(RequestOptions requestOptions)\npublic CompletableFuture<ProvidersResponse> listProvidersAsync(RequestOptions requestOptions)\npublic ApiResponse<ProvidersResponse> listProvidersWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<ProvidersResponse>> listProvidersWithResponseAsync(RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/saas/plans"
+      },
+      "members": {
+        "async": "listSaasPlansAsync",
+        "sync": "listSaasPlans"
+      },
+      "operation_id": "listSaasPlans",
+      "parameters": [],
+      "reference_page": "operations/fleet/listsaasplans.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SaasPlansResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SaasPlansResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public SaasPlansResponse listSaasPlans()\npublic ApiResponse<SaasPlansResponse> listSaasPlansWithResponse()\npublic CompletableFuture<ApiResponse<SaasPlansResponse>> listSaasPlansWithResponseAsync()\npublic CompletableFuture<SaasPlansResponse> listSaasPlansAsync()\npublic SaasPlansResponse listSaasPlans(RequestOptions requestOptions)\npublic CompletableFuture<SaasPlansResponse> listSaasPlansAsync(RequestOptions requestOptions)\npublic ApiResponse<SaasPlansResponse> listSaasPlansWithResponse(RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<SaasPlansResponse>> listSaasPlansWithResponseAsync(RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/action"
+      },
+      "members": {
+        "async": "performCloudBoxActionAsync",
+        "sync": "performCloudBoxAction"
+      },
+      "operation_id": "performCloudBoxAction",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/performcloudboxaction.md",
+      "request_body": {
+        "contract_type": "CloudBoxActionRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CloudBoxActionRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxActionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxActionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public CloudBoxActionResponse performCloudBoxAction(String boxId, CloudBoxActionRequest body)\npublic ApiResponse<CloudBoxActionResponse> performCloudBoxActionWithResponse(String boxId, CloudBoxActionRequest body)\npublic CompletableFuture<ApiResponse<CloudBoxActionResponse>> performCloudBoxActionWithResponseAsync(String boxId, CloudBoxActionRequest body)\npublic CompletableFuture<CloudBoxActionResponse> performCloudBoxActionAsync(String boxId, CloudBoxActionRequest body)\npublic CloudBoxActionResponse performCloudBoxAction(String boxId, CloudBoxActionRequest body, RequestOptions requestOptions)\npublic CompletableFuture<CloudBoxActionResponse> performCloudBoxActionAsync(String boxId, CloudBoxActionRequest body, RequestOptions requestOptions)\npublic ApiResponse<CloudBoxActionResponse> performCloudBoxActionWithResponse(String boxId, CloudBoxActionRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<CloudBoxActionResponse>> performCloudBoxActionWithResponseAsync(String boxId, CloudBoxActionRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/agent-jobs"
+      },
+      "members": {
+        "async": "startAgentJobAsync",
+        "sync": "startAgentJob"
+      },
+      "operation_id": "startAgentJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startagentjob.md",
+      "request_body": {
+        "contract_type": "StartAgentJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartAgentJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public JobSummary startAgentJob(StartAgentJobRequest body)\npublic ApiResponse<JobSummary> startAgentJobWithResponse(StartAgentJobRequest body)\npublic CompletableFuture<ApiResponse<JobSummary>> startAgentJobWithResponseAsync(StartAgentJobRequest body)\npublic CompletableFuture<JobSummary> startAgentJobAsync(StartAgentJobRequest body)\npublic JobSummary startAgentJob(StartAgentJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<JobSummary> startAgentJobAsync(StartAgentJobRequest body, RequestOptions requestOptions)\npublic ApiResponse<JobSummary> startAgentJobWithResponse(StartAgentJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobSummary>> startAgentJobWithResponseAsync(StartAgentJobRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/github-jobs"
+      },
+      "members": {
+        "async": "startGithubJobAsync",
+        "sync": "startGithubJob"
+      },
+      "operation_id": "startGithubJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startgithubjob.md",
+      "request_body": {
+        "contract_type": "StartGithubJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartGithubJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public JobSummary startGithubJob(StartGithubJobRequest body)\npublic ApiResponse<JobSummary> startGithubJobWithResponse(StartGithubJobRequest body)\npublic CompletableFuture<ApiResponse<JobSummary>> startGithubJobWithResponseAsync(StartGithubJobRequest body)\npublic CompletableFuture<JobSummary> startGithubJobAsync(StartGithubJobRequest body)\npublic JobSummary startGithubJob(StartGithubJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<JobSummary> startGithubJobAsync(StartGithubJobRequest body, RequestOptions requestOptions)\npublic ApiResponse<JobSummary> startGithubJobWithResponse(StartGithubJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobSummary>> startGithubJobWithResponseAsync(StartGithubJobRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "async": "startProjectJobAsync",
+        "sync": "startProjectJob"
+      },
+      "operation_id": "startProjectJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startprojectjob.md",
+      "request_body": {
+        "contract_type": "StartProjectJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartProjectJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public JobSummary startProjectJob(StartProjectJobRequest body)\npublic ApiResponse<JobSummary> startProjectJobWithResponse(StartProjectJobRequest body)\npublic CompletableFuture<ApiResponse<JobSummary>> startProjectJobWithResponseAsync(StartProjectJobRequest body)\npublic CompletableFuture<JobSummary> startProjectJobAsync(StartProjectJobRequest body)\npublic JobSummary startProjectJob(StartProjectJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<JobSummary> startProjectJobAsync(StartProjectJobRequest body, RequestOptions requestOptions)\npublic ApiResponse<JobSummary> startProjectJobWithResponse(StartProjectJobRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<JobSummary>> startProjectJobWithResponseAsync(StartProjectJobRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/vault"
+      },
+      "members": {
+        "async": "syncCloudBoxVaultAsync",
+        "sync": "syncCloudBoxVault"
+      },
+      "operation_id": "syncCloudBoxVault",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/synccloudboxvault.md",
+      "request_body": {
+        "contract_type": "SyncCloudBoxVaultRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "SyncCloudBoxVaultRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SyncCloudBoxVaultResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SyncCloudBoxVaultResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public SyncCloudBoxVaultResponse syncCloudBoxVault(String boxId, SyncCloudBoxVaultRequest body)\npublic ApiResponse<SyncCloudBoxVaultResponse> syncCloudBoxVaultWithResponse(String boxId, SyncCloudBoxVaultRequest body)\npublic CompletableFuture<ApiResponse<SyncCloudBoxVaultResponse>> syncCloudBoxVaultWithResponseAsync(String boxId, SyncCloudBoxVaultRequest body)\npublic CompletableFuture<SyncCloudBoxVaultResponse> syncCloudBoxVaultAsync(String boxId, SyncCloudBoxVaultRequest body)\npublic SyncCloudBoxVaultResponse syncCloudBoxVault(String boxId, SyncCloudBoxVaultRequest body, RequestOptions requestOptions)\npublic CompletableFuture<SyncCloudBoxVaultResponse> syncCloudBoxVaultAsync(String boxId, SyncCloudBoxVaultRequest body, RequestOptions requestOptions)\npublic ApiResponse<SyncCloudBoxVaultResponse> syncCloudBoxVaultWithResponse(String boxId, SyncCloudBoxVaultRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<SyncCloudBoxVaultResponse>> syncCloudBoxVaultWithResponseAsync(String boxId, SyncCloudBoxVaultRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "PUT",
+        "path": "/v1/organizations/{orgId}/fleet/policy"
+      },
+      "members": {
+        "async": "updateOrganizationFleetPolicyAsync",
+        "sync": "updateOrganizationFleetPolicy"
+      },
+      "operation_id": "updateOrganizationFleetPolicy",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/updateorganizationfleetpolicy.md",
+      "request_body": {
+        "contract_type": "FleetPolicyUpdateRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "FleetPolicyUpdateRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public OrganizationFleetResponse updateOrganizationFleetPolicy(String orgId, FleetPolicyUpdateRequest body)\npublic ApiResponse<OrganizationFleetResponse> updateOrganizationFleetPolicyWithResponse(String orgId, FleetPolicyUpdateRequest body)\npublic CompletableFuture<ApiResponse<OrganizationFleetResponse>> updateOrganizationFleetPolicyWithResponseAsync(String orgId, FleetPolicyUpdateRequest body)\npublic CompletableFuture<OrganizationFleetResponse> updateOrganizationFleetPolicyAsync(String orgId, FleetPolicyUpdateRequest body)\npublic OrganizationFleetResponse updateOrganizationFleetPolicy(String orgId, FleetPolicyUpdateRequest body, RequestOptions requestOptions)\npublic CompletableFuture<OrganizationFleetResponse> updateOrganizationFleetPolicyAsync(String orgId, FleetPolicyUpdateRequest body, RequestOptions requestOptions)\npublic ApiResponse<OrganizationFleetResponse> updateOrganizationFleetPolicyWithResponse(String orgId, FleetPolicyUpdateRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<OrganizationFleetResponse>> updateOrganizationFleetPolicyWithResponseAsync(String orgId, FleetPolicyUpdateRequest body, RequestOptions requestOptions)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "async": "upsertOrganizationMemberAsync",
+        "sync": "upsertOrganizationMember"
+      },
+      "operation_id": "upsertOrganizationMember",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/upsertorganizationmember.md",
+      "request_body": {
+        "contract_type": "UpsertOrganizationMemberRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "UpsertOrganizationMemberRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMember",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMember"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public OrganizationMember upsertOrganizationMember(String orgId, UpsertOrganizationMemberRequest body)\npublic ApiResponse<OrganizationMember> upsertOrganizationMemberWithResponse(String orgId, UpsertOrganizationMemberRequest body)\npublic CompletableFuture<ApiResponse<OrganizationMember>> upsertOrganizationMemberWithResponseAsync(String orgId, UpsertOrganizationMemberRequest body)\npublic CompletableFuture<OrganizationMember> upsertOrganizationMemberAsync(String orgId, UpsertOrganizationMemberRequest body)\npublic OrganizationMember upsertOrganizationMember(String orgId, UpsertOrganizationMemberRequest body, RequestOptions requestOptions)\npublic CompletableFuture<OrganizationMember> upsertOrganizationMemberAsync(String orgId, UpsertOrganizationMemberRequest body, RequestOptions requestOptions)\npublic ApiResponse<OrganizationMember> upsertOrganizationMemberWithResponse(String orgId, UpsertOrganizationMemberRequest body, RequestOptions requestOptions)\npublic CompletableFuture<ApiResponse<OrganizationMember>> upsertOrganizationMemberWithResponseAsync(String orgId, UpsertOrganizationMemberRequest body, RequestOptions requestOptions)"
+    }
+  ],
+  "package": {
+    "group": "dev.omniwrap.generated",
+    "name": "boxfleet-sdk",
+    "version": "0.3.0"
+  },
+  "package_unavailable_reason": null,
+  "provenance": {
+    "api_version": "0.3.0",
+    "artifact_manifest": "../../sdk/java/BoxFleetSdk/omniwrap-artifact.json",
+    "artifact_manifest_sha256": "f1b3105f7a9e1ba3ee8e164e1f1d64b8c22fd13e5ee04a0054d6a785918f2afe",
+    "artifact_type": "java-sdk",
+    "contract_fingerprint": "17dde1a898058b32e5704774b765a51c2bcf12bdd04ec3805d6b6804ac5ae7fa",
+    "generator": {
+      "name": "omniwrap",
+      "renderer_edition": 1,
+      "version": "2.0.0"
+    },
+    "maturity": "experimental",
+    "semantic_ir_version": "1.14.0"
+  },
+  "types": [
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CapabilitiesResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxEnvelope"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CreateCloudBoxRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "FleetPolicyUpdateRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "HealthResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "InspectProjectRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobExecutionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobLogsResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobSummary"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ModsCatalogResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationFleetResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMember"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMembersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProjectInspectionPlan"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProvidersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SaasPlansResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartAgentJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartGithubJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartProjectJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "UpsertOrganizationMemberRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "WhiteLabelCloudCatalog"
+    }
+  ],
+  "unavailable_reason": null,
+  "version": "1.0.0"
+}

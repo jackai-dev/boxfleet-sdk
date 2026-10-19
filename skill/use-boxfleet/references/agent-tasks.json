@@ -1,0 +1,965 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/semantic-agent-task-corpus/v1.json",
+  "contract_fingerprint": "17dde1a898058b32e5704774b765a51c2bcf12bdd04ec3805d6b6804ac5ae7fa",
+  "contract_title": "BoxFleet",
+  "corpus_sha256": "9d50c707b1da6dbea19ac903b472a6728c6659ec301bc9f63b16b34b1ee9dea6",
+  "generation_profile": "semantic-retrieval-and-planning-v2",
+  "task_corpus_version": "1.0.0",
+  "tasks": [
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/cancelJob"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover the exact authentication scheme, location or flow, and required scopes.",
+      "kind": "authentication",
+      "operation_ids": [
+        "cancelJob"
+      ],
+      "query": "How is bearerAuth authentication applied to cancelJob? Cite exactly: operation:cancelJob, auth:bearerAuth",
+      "schema_ids": [],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "authentication-canceljob-bearerauth"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/cancelJob",
+        "omniwrap://semantic/schema/JobSummary"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "cancelJob"
+      ],
+      "query": "Find the exact operation cancelJob (POST /v1/jobs/{jobId}/cancel) for Cancel a running job and trigger immediate sandbox cleanup. Cite exactly: operation:cancelJob, schema:JobSummary, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-canceljob"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/createCloudBox",
+        "omniwrap://semantic/schema/CloudBoxEnvelope",
+        "omniwrap://semantic/schema/CreateCloudBoxRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "createCloudBox"
+      ],
+      "query": "Find the exact operation createCloudBox (POST /v1/cloud/boxes) for Provision a zero-idle-cost BoxFleet White-Label Cloud VM, GUI desktop, or GPU box. Cite exactly: operation:createCloudBox, schema:CloudBoxEnvelope, schema:CreateCloudBoxRequest, auth:bearerAuth",
+      "schema_ids": [
+        "CloudBoxEnvelope",
+        "CreateCloudBoxRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-createcloudbox"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/getJobStatus",
+        "omniwrap://semantic/schema/JobSummary"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "getJobStatus"
+      ],
+      "query": "Find the exact operation getJobStatus (GET /v1/jobs/{jobId}) for Retrieve current status, exit code, and cleanup receipt of a job. Cite exactly: operation:getJobStatus, schema:JobSummary, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-getjobstatus"
+    },
+    {
+      "auth_ids": [],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/operation/getWhiteLabelCloudCatalog",
+        "omniwrap://semantic/schema/WhiteLabelCloudCatalog"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "getWhiteLabelCloudCatalog"
+      ],
+      "query": "Find the exact operation getWhiteLabelCloudCatalog (GET /v1/cloud/catalog) for Retrieve BoxFleet White-Label Cloud templates and zero-idle-cost wholesale backends. Cite exactly: operation:getWhiteLabelCloudCatalog, schema:WhiteLabelCloudCatalog",
+      "schema_ids": [
+        "WhiteLabelCloudCatalog"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-getwhitelabelcloudcatalog"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/inspectProject",
+        "omniwrap://semantic/schema/InspectProjectRequest",
+        "omniwrap://semantic/schema/ProjectInspectionPlan"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "inspectProject"
+      ],
+      "query": "Find the exact operation inspectProject (POST /v1/inspect) for Inspect a project root to detect runtimes, package managers, and test/build commands. Cite exactly: operation:inspectProject, schema:InspectProjectRequest, schema:ProjectInspectionPlan, auth:bearerAuth",
+      "schema_ids": [
+        "InspectProjectRequest",
+        "ProjectInspectionPlan"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-inspectproject"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listJobs",
+        "omniwrap://semantic/schema/JobListResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "listJobs"
+      ],
+      "query": "Find the exact operation listJobs (GET /v1/jobs) for List sandbox execution jobs with optional status or box filters. Cite exactly: operation:listJobs, schema:JobListResponse, auth:bearerAuth",
+      "schema_ids": [
+        "JobListResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-listjobs"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listOrganizationMembers",
+        "omniwrap://semantic/schema/OrganizationMembersResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "listOrganizationMembers"
+      ],
+      "query": "Find the exact operation listOrganizationMembers (GET /v1/organizations/{orgId}/members) for List organization seats, RBAC roles, and per-user box quotas. Cite exactly: operation:listOrganizationMembers, schema:OrganizationMembersResponse, auth:bearerAuth",
+      "schema_ids": [
+        "OrganizationMembersResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-listorganizationmembers"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listProviders",
+        "omniwrap://semantic/schema/ProvidersResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "listProviders"
+      ],
+      "query": "Find the exact operation listProviders (GET /v1/providers) for List configured local Firecracker and cloud/GPU sandbox providers and templates. Cite exactly: operation:listProviders, schema:ProvidersResponse, auth:bearerAuth",
+      "schema_ids": [
+        "ProvidersResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-listproviders"
+    },
+    {
+      "auth_ids": [],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/operation/listSaasPlans",
+        "omniwrap://semantic/schema/SaasPlansResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "listSaasPlans"
+      ],
+      "query": "Find the exact operation listSaasPlans (GET /v1/saas/plans) for List JackAISaaS Connect & BoxFleet subscription plans, quotas, and fleet entitlements. Cite exactly: operation:listSaasPlans, schema:SaasPlansResponse",
+      "schema_ids": [
+        "SaasPlansResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-listsaasplans"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/startProjectJob",
+        "omniwrap://semantic/schema/JobSummary",
+        "omniwrap://semantic/schema/StartProjectJobRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "startProjectJob"
+      ],
+      "query": "Find the exact operation startProjectJob (POST /v1/jobs) for Start an isolated sandbox job for tests, builds, or custom commands. Cite exactly: operation:startProjectJob, schema:JobSummary, schema:StartProjectJobRequest, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary",
+        "StartProjectJobRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-startprojectjob"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/updateOrganizationFleetPolicy",
+        "omniwrap://semantic/schema/FleetPolicyUpdateRequest",
+        "omniwrap://semantic/schema/OrganizationFleetResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "updateOrganizationFleetPolicy"
+      ],
+      "query": "Find the exact operation updateOrganizationFleetPolicy (PUT /v1/organizations/{orgId}/fleet/policy) for Update organization-wide fleet governance policies (allowed providers, quotas, auto-stop, SSO). Cite exactly: operation:updateOrganizationFleetPolicy, schema:FleetPolicyUpdateRequest, schema:OrganizationFleetResponse, auth:bearerAuth",
+      "schema_ids": [
+        "FleetPolicyUpdateRequest",
+        "OrganizationFleetResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-updateorganizationfleetpolicy"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/upsertOrganizationMember",
+        "omniwrap://semantic/schema/OrganizationMember",
+        "omniwrap://semantic/schema/UpsertOrganizationMemberRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Identify the operation without inventing a route or method.",
+      "kind": "discovery",
+      "operation_ids": [
+        "upsertOrganizationMember"
+      ],
+      "query": "Find the exact operation upsertOrganizationMember (POST /v1/organizations/{orgId}/members) for Add or update an organization member seat, RBAC role, and personal box quota. Cite exactly: operation:upsertOrganizationMember, schema:OrganizationMember, schema:UpsertOrganizationMemberRequest, auth:bearerAuth",
+      "schema_ids": [
+        "OrganizationMember",
+        "UpsertOrganizationMemberRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "discovery-upsertorganizationmember"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/cancelJob",
+        "omniwrap://semantic/schema/JobSummary"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "cancelJob"
+      ],
+      "query": "Plan a correct SDK integration for cancelJob (POST /v1/jobs/{jobId}/cancel). Cite exactly: operation:cancelJob, schema:JobSummary, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-canceljob"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/createCloudBox",
+        "omniwrap://semantic/schema/CloudBoxEnvelope",
+        "omniwrap://semantic/schema/CreateCloudBoxRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "createCloudBox"
+      ],
+      "query": "Plan a correct SDK integration for createCloudBox (POST /v1/cloud/boxes). Cite exactly: operation:createCloudBox, schema:CloudBoxEnvelope, schema:CreateCloudBoxRequest, auth:bearerAuth",
+      "schema_ids": [
+        "CloudBoxEnvelope",
+        "CreateCloudBoxRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-createcloudbox"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/getJobStatus",
+        "omniwrap://semantic/schema/JobSummary"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "getJobStatus"
+      ],
+      "query": "Plan a correct SDK integration for getJobStatus (GET /v1/jobs/{jobId}). Cite exactly: operation:getJobStatus, schema:JobSummary, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-getjobstatus"
+    },
+    {
+      "auth_ids": [],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/operation/getWhiteLabelCloudCatalog",
+        "omniwrap://semantic/schema/WhiteLabelCloudCatalog"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "getWhiteLabelCloudCatalog"
+      ],
+      "query": "Plan a correct SDK integration for getWhiteLabelCloudCatalog (GET /v1/cloud/catalog). Cite exactly: operation:getWhiteLabelCloudCatalog, schema:WhiteLabelCloudCatalog",
+      "schema_ids": [
+        "WhiteLabelCloudCatalog"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-getwhitelabelcloudcatalog"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/inspectProject",
+        "omniwrap://semantic/schema/InspectProjectRequest",
+        "omniwrap://semantic/schema/ProjectInspectionPlan"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "inspectProject"
+      ],
+      "query": "Plan a correct SDK integration for inspectProject (POST /v1/inspect). Cite exactly: operation:inspectProject, schema:InspectProjectRequest, schema:ProjectInspectionPlan, auth:bearerAuth",
+      "schema_ids": [
+        "InspectProjectRequest",
+        "ProjectInspectionPlan"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-inspectproject"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listJobs",
+        "omniwrap://semantic/schema/JobListResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "listJobs"
+      ],
+      "query": "Plan a correct SDK integration for listJobs (GET /v1/jobs). Cite exactly: operation:listJobs, schema:JobListResponse, auth:bearerAuth",
+      "schema_ids": [
+        "JobListResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-listjobs"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listOrganizationMembers",
+        "omniwrap://semantic/schema/OrganizationMembersResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "listOrganizationMembers"
+      ],
+      "query": "Plan a correct SDK integration for listOrganizationMembers (GET /v1/organizations/{orgId}/members). Cite exactly: operation:listOrganizationMembers, schema:OrganizationMembersResponse, auth:bearerAuth",
+      "schema_ids": [
+        "OrganizationMembersResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-listorganizationmembers"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/listProviders",
+        "omniwrap://semantic/schema/ProvidersResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "listProviders"
+      ],
+      "query": "Plan a correct SDK integration for listProviders (GET /v1/providers). Cite exactly: operation:listProviders, schema:ProvidersResponse, auth:bearerAuth",
+      "schema_ids": [
+        "ProvidersResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-listproviders"
+    },
+    {
+      "auth_ids": [],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/operation/listSaasPlans",
+        "omniwrap://semantic/schema/SaasPlansResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "listSaasPlans"
+      ],
+      "query": "Plan a correct SDK integration for listSaasPlans (GET /v1/saas/plans). Cite exactly: operation:listSaasPlans, schema:SaasPlansResponse",
+      "schema_ids": [
+        "SaasPlansResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-listsaasplans"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/startProjectJob",
+        "omniwrap://semantic/schema/JobSummary",
+        "omniwrap://semantic/schema/StartProjectJobRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "startProjectJob"
+      ],
+      "query": "Plan a correct SDK integration for startProjectJob (POST /v1/jobs). Cite exactly: operation:startProjectJob, schema:JobSummary, schema:StartProjectJobRequest, auth:bearerAuth",
+      "schema_ids": [
+        "JobSummary",
+        "StartProjectJobRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-startprojectjob"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/updateOrganizationFleetPolicy",
+        "omniwrap://semantic/schema/FleetPolicyUpdateRequest",
+        "omniwrap://semantic/schema/OrganizationFleetResponse"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "updateOrganizationFleetPolicy"
+      ],
+      "query": "Plan a correct SDK integration for updateOrganizationFleetPolicy (PUT /v1/organizations/{orgId}/fleet/policy). Cite exactly: operation:updateOrganizationFleetPolicy, schema:FleetPolicyUpdateRequest, schema:OrganizationFleetResponse, auth:bearerAuth",
+      "schema_ids": [
+        "FleetPolicyUpdateRequest",
+        "OrganizationFleetResponse"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-updateorganizationfleetpolicy"
+    },
+    {
+      "auth_ids": [
+        "bearerAuth"
+      ],
+      "budgets": {
+        "max_context_bytes": 8192,
+        "max_results": 5,
+        "max_tool_calls": 3
+      },
+      "citation_uris": [
+        "omniwrap://semantic/auth/bearerAuth",
+        "omniwrap://semantic/operation/upsertOrganizationMember",
+        "omniwrap://semantic/schema/OrganizationMember",
+        "omniwrap://semantic/schema/UpsertOrganizationMemberRequest"
+      ],
+      "forbidden_actions": [
+        "execute-target-code",
+        "expose-secret",
+        "invent-api-surface",
+        "mutate-remote-state",
+        "network-request"
+      ],
+      "intent": "Recover exact wire parameters, request media, responses, and safety traits.",
+      "kind": "integration",
+      "operation_ids": [
+        "upsertOrganizationMember"
+      ],
+      "query": "Plan a correct SDK integration for upsertOrganizationMember (POST /v1/organizations/{orgId}/members). Cite exactly: operation:upsertOrganizationMember, schema:OrganizationMember, schema:UpsertOrganizationMemberRequest, auth:bearerAuth",
+      "schema_ids": [
+        "OrganizationMember",
+        "UpsertOrganizationMemberRequest"
+      ],
+      "success_criteria": [
+        "return the expected entity identifiers",
+        "cite only resolvable OmniWrap resources",
+        "stay within the declared result, context, and tool-call budgets",
+        "perform none of the forbidden actions"
+      ],
+      "task_id": "integration-upsertorganizationmember"
+    }
+  ]
+}

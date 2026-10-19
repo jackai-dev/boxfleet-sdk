@@ -1,0 +1,291 @@
+# BoxFleet
+
+> Reference documentation for BoxFleet: guides, SDK references and the HTTP reference of one documentation build.
+
+Documentation build `5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e` (edition `5e16c0150e0e`), API version `0.3.0`. Every link below is the Markdown rendering of a page of this build; the same page exists as HTML next to it.
+
+## SDK reference
+
+- [dotnet SDK](sdk/dotnet/index.md): package BoxFleetSdk 0.3.0
+- [Getting started (dotnet)](sdk/dotnet/guide/getting-started.md)
+- [Installation (dotnet)](sdk/dotnet/guide/installation.md)
+- [Configuration (dotnet)](sdk/dotnet/guide/configuration.md)
+- [Authentication (dotnet)](sdk/dotnet/guide/authentication.md)
+- [Errors (dotnet)](sdk/dotnet/guide/errors.md)
+- [Pagination (dotnet)](sdk/dotnet/guide/pagination.md)
+- [Streaming (dotnet)](sdk/dotnet/guide/streaming.md)
+- [Migration (dotnet)](sdk/dotnet/guide/migration.md)
+- [client.CancelJobAsync (dotnet)](sdk/dotnet/jobs/canceljob.md): cancelJob
+- [client.CreateCloudBoxAsync (dotnet)](sdk/dotnet/cloud/createcloudbox.md): createCloudBox
+- [client.DescribeAgentModsAsync (dotnet)](sdk/dotnet/system/describeagentmods.md): describeAgentMods
+- [client.GetHealthAsync (dotnet)](sdk/dotnet/system/gethealth.md): getHealth
+- [client.GetJobExecutionAsync (dotnet)](sdk/dotnet/jobs/getjobexecution.md): getJobExecution
+- [client.GetJobLogsAsync (dotnet)](sdk/dotnet/jobs/getjoblogs.md): getJobLogs
+- [client.GetJobStatusAsync (dotnet)](sdk/dotnet/jobs/getjobstatus.md): getJobStatus
+- [client.GetOrganizationFleetAsync (dotnet)](sdk/dotnet/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.GetWhiteLabelCloudCatalogAsync (dotnet)](sdk/dotnet/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.InspectProjectAsync (dotnet)](sdk/dotnet/jobs/inspectproject.md): inspectProject
+- [client.ListCapabilitiesAsync (dotnet)](sdk/dotnet/system/listcapabilities.md): listCapabilities
+- [client.ListCloudBoxesAsync (dotnet)](sdk/dotnet/cloud/listcloudboxes.md): listCloudBoxes
+- [client.ListJobsAsync (dotnet)](sdk/dotnet/jobs/listjobs.md): listJobs
+- [client.ListOrganizationMembersAsync (dotnet)](sdk/dotnet/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.ListProvidersAsync (dotnet)](sdk/dotnet/system/listproviders.md): listProviders
+- [client.ListSaasPlansAsync (dotnet)](sdk/dotnet/fleet/listsaasplans.md): listSaasPlans
+- [client.PerformCloudBoxActionAsync (dotnet)](sdk/dotnet/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.StartAgentJobAsync (dotnet)](sdk/dotnet/jobs/startagentjob.md): startAgentJob
+- [client.StartGithubJobAsync (dotnet)](sdk/dotnet/jobs/startgithubjob.md): startGithubJob
+- [client.StartProjectJobAsync (dotnet)](sdk/dotnet/jobs/startprojectjob.md): startProjectJob
+- [client.SyncCloudBoxVaultAsync (dotnet)](sdk/dotnet/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.UpdateOrganizationFleetPolicyAsync (dotnet)](sdk/dotnet/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.UpsertOrganizationMemberAsync (dotnet)](sdk/dotnet/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [go SDK](sdk/go/index.md): package boxfleet 0.3.0
+- [Getting started (go)](sdk/go/guide/getting-started.md)
+- [Installation (go)](sdk/go/guide/installation.md)
+- [Configuration (go)](sdk/go/guide/configuration.md)
+- [Authentication (go)](sdk/go/guide/authentication.md)
+- [Errors (go)](sdk/go/guide/errors.md)
+- [Pagination (go)](sdk/go/guide/pagination.md)
+- [Streaming (go)](sdk/go/guide/streaming.md)
+- [Migration (go)](sdk/go/guide/migration.md)
+- [client.Jobs.Cancel (go)](sdk/go/jobs/canceljob.md): cancelJob
+- [client.Cloud.NewBox (go)](sdk/go/cloud/createcloudbox.md): createCloudBox
+- [client.System.DescribeAgentMods (go)](sdk/go/system/describeagentmods.md): describeAgentMods
+- [client.System.GetHealth (go)](sdk/go/system/gethealth.md): getHealth
+- [client.Jobs.GetExecution (go)](sdk/go/jobs/getjobexecution.md): getJobExecution
+- [client.Jobs.GetLogs (go)](sdk/go/jobs/getjoblogs.md): getJobLogs
+- [client.Jobs.GetStatus (go)](sdk/go/jobs/getjobstatus.md): getJobStatus
+- [client.Fleet.GetOrganization (go)](sdk/go/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.Cloud.GetWhiteLabelCatalog (go)](sdk/go/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.Jobs.InspectProject (go)](sdk/go/jobs/inspectproject.md): inspectProject
+- [client.System.ListCapabilities (go)](sdk/go/system/listcapabilities.md): listCapabilities
+- [client.Cloud.ListBoxes (go)](sdk/go/cloud/listcloudboxes.md): listCloudBoxes
+- [client.Jobs.List (go)](sdk/go/jobs/listjobs.md): listJobs
+- [client.Fleet.ListOrganizationMembers (go)](sdk/go/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.System.ListProviders (go)](sdk/go/system/listproviders.md): listProviders
+- [client.Fleet.ListSaasPlans (go)](sdk/go/fleet/listsaasplans.md): listSaasPlans
+- [client.Cloud.PerformBoxAction (go)](sdk/go/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.Jobs.StartAgent (go)](sdk/go/jobs/startagentjob.md): startAgentJob
+- [client.Jobs.StartGithub (go)](sdk/go/jobs/startgithubjob.md): startGithubJob
+- [client.Jobs.StartProject (go)](sdk/go/jobs/startprojectjob.md): startProjectJob
+- [client.Cloud.SyncBoxVault (go)](sdk/go/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.Fleet.UpdateOrganizationPolicy (go)](sdk/go/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.Fleet.UpsertOrganizationMember (go)](sdk/go/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [java SDK](sdk/java/index.md): package boxfleet-sdk 0.3.0
+- [Getting started (java)](sdk/java/guide/getting-started.md)
+- [Installation (java)](sdk/java/guide/installation.md)
+- [Configuration (java)](sdk/java/guide/configuration.md)
+- [Authentication (java)](sdk/java/guide/authentication.md)
+- [Errors (java)](sdk/java/guide/errors.md)
+- [Pagination (java)](sdk/java/guide/pagination.md)
+- [Streaming (java)](sdk/java/guide/streaming.md)
+- [Migration (java)](sdk/java/guide/migration.md)
+- [client.cancelJob (java)](sdk/java/jobs/canceljob.md): cancelJob
+- [client.createCloudBox (java)](sdk/java/cloud/createcloudbox.md): createCloudBox
+- [client.describeAgentMods (java)](sdk/java/system/describeagentmods.md): describeAgentMods
+- [client.getHealth (java)](sdk/java/system/gethealth.md): getHealth
+- [client.getJobExecution (java)](sdk/java/jobs/getjobexecution.md): getJobExecution
+- [client.getJobLogs (java)](sdk/java/jobs/getjoblogs.md): getJobLogs
+- [client.getJobStatus (java)](sdk/java/jobs/getjobstatus.md): getJobStatus
+- [client.getOrganizationFleet (java)](sdk/java/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.getWhiteLabelCloudCatalog (java)](sdk/java/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.inspectProject (java)](sdk/java/jobs/inspectproject.md): inspectProject
+- [client.listCapabilities (java)](sdk/java/system/listcapabilities.md): listCapabilities
+- [client.listCloudBoxes (java)](sdk/java/cloud/listcloudboxes.md): listCloudBoxes
+- [client.listJobs (java)](sdk/java/jobs/listjobs.md): listJobs
+- [client.listOrganizationMembers (java)](sdk/java/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.listProviders (java)](sdk/java/system/listproviders.md): listProviders
+- [client.listSaasPlans (java)](sdk/java/fleet/listsaasplans.md): listSaasPlans
+- [client.performCloudBoxAction (java)](sdk/java/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.startAgentJob (java)](sdk/java/jobs/startagentjob.md): startAgentJob
+- [client.startGithubJob (java)](sdk/java/jobs/startgithubjob.md): startGithubJob
+- [client.startProjectJob (java)](sdk/java/jobs/startprojectjob.md): startProjectJob
+- [client.syncCloudBoxVault (java)](sdk/java/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.updateOrganizationFleetPolicy (java)](sdk/java/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.upsertOrganizationMember (java)](sdk/java/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [javascript SDK](sdk/javascript/index.md): package boxfleet-sdk 0.3.0
+- [Getting started (javascript)](sdk/javascript/guide/getting-started.md)
+- [Installation (javascript)](sdk/javascript/guide/installation.md)
+- [Configuration (javascript)](sdk/javascript/guide/configuration.md)
+- [Authentication (javascript)](sdk/javascript/guide/authentication.md)
+- [Errors (javascript)](sdk/javascript/guide/errors.md)
+- [Pagination (javascript)](sdk/javascript/guide/pagination.md)
+- [Streaming (javascript)](sdk/javascript/guide/streaming.md)
+- [Migration (javascript)](sdk/javascript/guide/migration.md)
+- [client.jobs.cancel (javascript)](sdk/javascript/jobs/canceljob.md): cancelJob
+- [client.cloud.createBox (javascript)](sdk/javascript/cloud/createcloudbox.md): createCloudBox
+- [client.system.describeAgentMods (javascript)](sdk/javascript/system/describeagentmods.md): describeAgentMods
+- [client.system.getHealth (javascript)](sdk/javascript/system/gethealth.md): getHealth
+- [client.jobs.getExecution (javascript)](sdk/javascript/jobs/getjobexecution.md): getJobExecution
+- [client.jobs.getLogs (javascript)](sdk/javascript/jobs/getjoblogs.md): getJobLogs
+- [client.jobs.getStatus (javascript)](sdk/javascript/jobs/getjobstatus.md): getJobStatus
+- [client.fleet.getOrganization (javascript)](sdk/javascript/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.cloud.getWhiteLabelCatalog (javascript)](sdk/javascript/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.jobs.inspectProject (javascript)](sdk/javascript/jobs/inspectproject.md): inspectProject
+- [client.system.listCapabilities (javascript)](sdk/javascript/system/listcapabilities.md): listCapabilities
+- [client.cloud.listBoxes (javascript)](sdk/javascript/cloud/listcloudboxes.md): listCloudBoxes
+- [client.jobs.list (javascript)](sdk/javascript/jobs/listjobs.md): listJobs
+- [client.fleet.listOrganizationMembers (javascript)](sdk/javascript/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.system.listProviders (javascript)](sdk/javascript/system/listproviders.md): listProviders
+- [client.fleet.listSaasPlans (javascript)](sdk/javascript/fleet/listsaasplans.md): listSaasPlans
+- [client.cloud.performBoxAction (javascript)](sdk/javascript/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.jobs.startAgent (javascript)](sdk/javascript/jobs/startagentjob.md): startAgentJob
+- [client.jobs.startGithub (javascript)](sdk/javascript/jobs/startgithubjob.md): startGithubJob
+- [client.jobs.startProject (javascript)](sdk/javascript/jobs/startprojectjob.md): startProjectJob
+- [client.cloud.syncBoxVault (javascript)](sdk/javascript/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.fleet.updateOrganizationPolicy (javascript)](sdk/javascript/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.fleet.upsertOrganizationMember (javascript)](sdk/javascript/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [kotlin SDK](sdk/kotlin/index.md): package boxfleet-sdk 0.3.0
+- [Getting started (kotlin)](sdk/kotlin/guide/getting-started.md)
+- [Installation (kotlin)](sdk/kotlin/guide/installation.md)
+- [Configuration (kotlin)](sdk/kotlin/guide/configuration.md)
+- [Authentication (kotlin)](sdk/kotlin/guide/authentication.md)
+- [Errors (kotlin)](sdk/kotlin/guide/errors.md)
+- [Pagination (kotlin)](sdk/kotlin/guide/pagination.md)
+- [Streaming (kotlin)](sdk/kotlin/guide/streaming.md)
+- [Migration (kotlin)](sdk/kotlin/guide/migration.md)
+- [client.cancelJob (kotlin)](sdk/kotlin/jobs/canceljob.md): cancelJob
+- [client.createCloudBox (kotlin)](sdk/kotlin/cloud/createcloudbox.md): createCloudBox
+- [client.describeAgentMods (kotlin)](sdk/kotlin/system/describeagentmods.md): describeAgentMods
+- [client.getHealth (kotlin)](sdk/kotlin/system/gethealth.md): getHealth
+- [client.getJobExecution (kotlin)](sdk/kotlin/jobs/getjobexecution.md): getJobExecution
+- [client.getJobLogs (kotlin)](sdk/kotlin/jobs/getjoblogs.md): getJobLogs
+- [client.getJobStatus (kotlin)](sdk/kotlin/jobs/getjobstatus.md): getJobStatus
+- [client.getOrganizationFleet (kotlin)](sdk/kotlin/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.getWhiteLabelCloudCatalog (kotlin)](sdk/kotlin/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.inspectProject (kotlin)](sdk/kotlin/jobs/inspectproject.md): inspectProject
+- [client.listCapabilities (kotlin)](sdk/kotlin/system/listcapabilities.md): listCapabilities
+- [client.listCloudBoxes (kotlin)](sdk/kotlin/cloud/listcloudboxes.md): listCloudBoxes
+- [client.listJobs (kotlin)](sdk/kotlin/jobs/listjobs.md): listJobs
+- [client.listOrganizationMembers (kotlin)](sdk/kotlin/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.listProviders (kotlin)](sdk/kotlin/system/listproviders.md): listProviders
+- [client.listSaasPlans (kotlin)](sdk/kotlin/fleet/listsaasplans.md): listSaasPlans
+- [client.performCloudBoxAction (kotlin)](sdk/kotlin/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.startAgentJob (kotlin)](sdk/kotlin/jobs/startagentjob.md): startAgentJob
+- [client.startGithubJob (kotlin)](sdk/kotlin/jobs/startgithubjob.md): startGithubJob
+- [client.startProjectJob (kotlin)](sdk/kotlin/jobs/startprojectjob.md): startProjectJob
+- [client.syncCloudBoxVault (kotlin)](sdk/kotlin/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.updateOrganizationFleetPolicy (kotlin)](sdk/kotlin/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.upsertOrganizationMember (kotlin)](sdk/kotlin/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [python SDK](sdk/python/index.md): package boxfleet-sdk 0.3.0
+- [Getting started (python)](sdk/python/guide/getting-started.md)
+- [Installation (python)](sdk/python/guide/installation.md)
+- [Configuration (python)](sdk/python/guide/configuration.md)
+- [Authentication (python)](sdk/python/guide/authentication.md)
+- [Errors (python)](sdk/python/guide/errors.md)
+- [Pagination (python)](sdk/python/guide/pagination.md)
+- [Streaming (python)](sdk/python/guide/streaming.md)
+- [Migration (python)](sdk/python/guide/migration.md)
+- [client.jobs.cancel (python)](sdk/python/jobs/canceljob.md): cancelJob
+- [client.cloud.create_box (python)](sdk/python/cloud/createcloudbox.md): createCloudBox
+- [client.system.describe_agent_mods (python)](sdk/python/system/describeagentmods.md): describeAgentMods
+- [client.system.get_health (python)](sdk/python/system/gethealth.md): getHealth
+- [client.jobs.get_execution (python)](sdk/python/jobs/getjobexecution.md): getJobExecution
+- [client.jobs.get_logs (python)](sdk/python/jobs/getjoblogs.md): getJobLogs
+- [client.jobs.get_status (python)](sdk/python/jobs/getjobstatus.md): getJobStatus
+- [client.fleet.get_organization (python)](sdk/python/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.cloud.get_white_label_catalog (python)](sdk/python/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.jobs.inspect_project (python)](sdk/python/jobs/inspectproject.md): inspectProject
+- [client.system.list_capabilities (python)](sdk/python/system/listcapabilities.md): listCapabilities
+- [client.cloud.list_boxes (python)](sdk/python/cloud/listcloudboxes.md): listCloudBoxes
+- [client.jobs.list (python)](sdk/python/jobs/listjobs.md): listJobs
+- [client.fleet.list_organization_members (python)](sdk/python/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.system.list_providers (python)](sdk/python/system/listproviders.md): listProviders
+- [client.fleet.list_saas_plans (python)](sdk/python/fleet/listsaasplans.md): listSaasPlans
+- [client.cloud.perform_box_action (python)](sdk/python/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.jobs.start_agent (python)](sdk/python/jobs/startagentjob.md): startAgentJob
+- [client.jobs.start_github (python)](sdk/python/jobs/startgithubjob.md): startGithubJob
+- [client.jobs.start_project (python)](sdk/python/jobs/startprojectjob.md): startProjectJob
+- [client.cloud.sync_box_vault (python)](sdk/python/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.fleet.update_organization_policy (python)](sdk/python/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.fleet.upsert_organization_member (python)](sdk/python/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [rust SDK](sdk/rust/index.md): package boxfleet_sdk 0.3.0
+- [Getting started (rust)](sdk/rust/guide/getting-started.md)
+- [Installation (rust)](sdk/rust/guide/installation.md)
+- [Configuration (rust)](sdk/rust/guide/configuration.md)
+- [Authentication (rust)](sdk/rust/guide/authentication.md)
+- [Errors (rust)](sdk/rust/guide/errors.md)
+- [Pagination (rust)](sdk/rust/guide/pagination.md)
+- [Streaming (rust)](sdk/rust/guide/streaming.md)
+- [Migration (rust)](sdk/rust/guide/migration.md)
+- [client.cancel_job (rust)](sdk/rust/jobs/canceljob.md): cancelJob
+- [client.create_cloud_box (rust)](sdk/rust/cloud/createcloudbox.md): createCloudBox
+- [client.describe_agent_mods (rust)](sdk/rust/system/describeagentmods.md): describeAgentMods
+- [client.get_health (rust)](sdk/rust/system/gethealth.md): getHealth
+- [client.get_job_execution (rust)](sdk/rust/jobs/getjobexecution.md): getJobExecution
+- [client.get_job_logs (rust)](sdk/rust/jobs/getjoblogs.md): getJobLogs
+- [client.get_job_status (rust)](sdk/rust/jobs/getjobstatus.md): getJobStatus
+- [client.get_organization_fleet (rust)](sdk/rust/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.get_white_label_cloud_catalog (rust)](sdk/rust/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.inspect_project (rust)](sdk/rust/jobs/inspectproject.md): inspectProject
+- [client.list_capabilities (rust)](sdk/rust/system/listcapabilities.md): listCapabilities
+- [client.list_cloud_boxes (rust)](sdk/rust/cloud/listcloudboxes.md): listCloudBoxes
+- [client.list_jobs (rust)](sdk/rust/jobs/listjobs.md): listJobs
+- [client.list_organization_members (rust)](sdk/rust/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.list_providers (rust)](sdk/rust/system/listproviders.md): listProviders
+- [client.list_saas_plans (rust)](sdk/rust/fleet/listsaasplans.md): listSaasPlans
+- [client.perform_cloud_box_action (rust)](sdk/rust/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.start_agent_job (rust)](sdk/rust/jobs/startagentjob.md): startAgentJob
+- [client.start_github_job (rust)](sdk/rust/jobs/startgithubjob.md): startGithubJob
+- [client.start_project_job (rust)](sdk/rust/jobs/startprojectjob.md): startProjectJob
+- [client.sync_cloud_box_vault (rust)](sdk/rust/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.update_organization_fleet_policy (rust)](sdk/rust/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.upsert_organization_member (rust)](sdk/rust/fleet/upsertorganizationmember.md): upsertOrganizationMember
+- [typescript SDK](sdk/typescript/index.md): package boxfleet-sdk 0.3.0
+- [Getting started (typescript)](sdk/typescript/guide/getting-started.md)
+- [Installation (typescript)](sdk/typescript/guide/installation.md)
+- [Configuration (typescript)](sdk/typescript/guide/configuration.md)
+- [Authentication (typescript)](sdk/typescript/guide/authentication.md)
+- [Errors (typescript)](sdk/typescript/guide/errors.md)
+- [Pagination (typescript)](sdk/typescript/guide/pagination.md)
+- [Streaming (typescript)](sdk/typescript/guide/streaming.md)
+- [Migration (typescript)](sdk/typescript/guide/migration.md)
+- [client.jobs.cancel (typescript)](sdk/typescript/jobs/canceljob.md): cancelJob
+- [client.cloud.createBox (typescript)](sdk/typescript/cloud/createcloudbox.md): createCloudBox
+- [client.system.describeAgentMods (typescript)](sdk/typescript/system/describeagentmods.md): describeAgentMods
+- [client.system.getHealth (typescript)](sdk/typescript/system/gethealth.md): getHealth
+- [client.jobs.getExecution (typescript)](sdk/typescript/jobs/getjobexecution.md): getJobExecution
+- [client.jobs.getLogs (typescript)](sdk/typescript/jobs/getjoblogs.md): getJobLogs
+- [client.jobs.getStatus (typescript)](sdk/typescript/jobs/getjobstatus.md): getJobStatus
+- [client.fleet.getOrganization (typescript)](sdk/typescript/fleet/getorganizationfleet.md): getOrganizationFleet
+- [client.cloud.getWhiteLabelCatalog (typescript)](sdk/typescript/cloud/getwhitelabelcloudcatalog.md): getWhiteLabelCloudCatalog
+- [client.jobs.inspectProject (typescript)](sdk/typescript/jobs/inspectproject.md): inspectProject
+- [client.system.listCapabilities (typescript)](sdk/typescript/system/listcapabilities.md): listCapabilities
+- [client.cloud.listBoxes (typescript)](sdk/typescript/cloud/listcloudboxes.md): listCloudBoxes
+- [client.jobs.list (typescript)](sdk/typescript/jobs/listjobs.md): listJobs
+- [client.fleet.listOrganizationMembers (typescript)](sdk/typescript/fleet/listorganizationmembers.md): listOrganizationMembers
+- [client.system.listProviders (typescript)](sdk/typescript/system/listproviders.md): listProviders
+- [client.fleet.listSaasPlans (typescript)](sdk/typescript/fleet/listsaasplans.md): listSaasPlans
+- [client.cloud.performBoxAction (typescript)](sdk/typescript/cloud/performcloudboxaction.md): performCloudBoxAction
+- [client.jobs.startAgent (typescript)](sdk/typescript/jobs/startagentjob.md): startAgentJob
+- [client.jobs.startGithub (typescript)](sdk/typescript/jobs/startgithubjob.md): startGithubJob
+- [client.jobs.startProject (typescript)](sdk/typescript/jobs/startprojectjob.md): startProjectJob
+- [client.cloud.syncBoxVault (typescript)](sdk/typescript/cloud/synccloudboxvault.md): syncCloudBoxVault
+- [client.fleet.updateOrganizationPolicy (typescript)](sdk/typescript/fleet/updateorganizationfleetpolicy.md): updateOrganizationFleetPolicy
+- [client.fleet.upsertOrganizationMember (typescript)](sdk/typescript/fleet/upsertorganizationmember.md): upsertOrganizationMember
+
+## HTTP reference
+
+- [HTTP reference](http/index.md): published operations: 23
+- [cancelJob](http/jobs/canceljob.md): POST /v1/jobs/{jobId}/cancel
+- [createCloudBox](http/cloud/createcloudbox.md): POST /v1/cloud/boxes
+- [describeAgentMods](http/system/describeagentmods.md): GET /v1/mods
+- [getHealth](http/system/gethealth.md): GET /health
+- [getJobExecution](http/jobs/getjobexecution.md): GET /v1/jobs/{jobId}/execution
+- [getJobLogs](http/jobs/getjoblogs.md): GET /v1/jobs/{jobId}/logs
+- [getJobStatus](http/jobs/getjobstatus.md): GET /v1/jobs/{jobId}
+- [getOrganizationFleet](http/fleet/getorganizationfleet.md): GET /v1/organizations/{orgId}/fleet
+- [getWhiteLabelCloudCatalog](http/cloud/getwhitelabelcloudcatalog.md): GET /v1/cloud/catalog
+- [inspectProject](http/jobs/inspectproject.md): POST /v1/inspect
+- [listCapabilities](http/system/listcapabilities.md): GET /v1/capabilities
+- [listCloudBoxes](http/cloud/listcloudboxes.md): GET /v1/cloud/boxes
+- [listJobs](http/jobs/listjobs.md): GET /v1/jobs
+- [listOrganizationMembers](http/fleet/listorganizationmembers.md): GET /v1/organizations/{orgId}/members
+- [listProviders](http/system/listproviders.md): GET /v1/providers
+- [listSaasPlans](http/fleet/listsaasplans.md): GET /v1/saas/plans
+- [performCloudBoxAction](http/cloud/performcloudboxaction.md): POST /v1/cloud/boxes/{boxId}/action
+- [startAgentJob](http/jobs/startagentjob.md): POST /v1/agent-jobs
+- [startGithubJob](http/jobs/startgithubjob.md): POST /v1/github-jobs
+- [startProjectJob](http/jobs/startprojectjob.md): POST /v1/jobs
+- [syncCloudBoxVault](http/cloud/synccloudboxvault.md): POST /v1/cloud/boxes/{boxId}/vault
+- [updateOrganizationFleetPolicy](http/fleet/updateorganizationfleetpolicy.md): PUT /v1/organizations/{orgId}/fleet/policy
+- [upsertOrganizationMember](http/fleet/upsertorganizationmember.md): POST /v1/organizations/{orgId}/members

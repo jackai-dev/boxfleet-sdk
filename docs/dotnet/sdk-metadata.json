@@ -1,0 +1,1062 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/sdk-documentation-metadata/v1.json",
+  "availability": "available",
+  "language": "dotnet",
+  "member_source": "renderer-naming",
+  "operations": [
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs/{jobId}/cancel"
+      },
+      "members": {
+        "async": "CancelJobAsync"
+      },
+      "operation_id": "cancelJob",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/canceljob.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<JobSummary> CancelJobAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "async": "CreateCloudBoxAsync"
+      },
+      "operation_id": "createCloudBox",
+      "parameters": [],
+      "reference_page": "operations/cloud/createcloudbox.md",
+      "request_body": {
+        "contract_type": "CreateCloudBoxRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CreateCloudBoxRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxEnvelope",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxEnvelope"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public async Task<CloudBoxEnvelope> CreateCloudBoxAsync(\nCreateCloudBoxRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/mods"
+      },
+      "members": {
+        "async": "DescribeAgentModsAsync"
+      },
+      "operation_id": "describeAgentMods",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "target",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/describeagentmods.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ModsCatalogResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ModsCatalogResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<ModsCatalogResponse> DescribeAgentModsAsync(\nDescribeAgentModsTarget? target = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/health"
+      },
+      "members": {
+        "async": "GetHealthAsync"
+      },
+      "operation_id": "getHealth",
+      "parameters": [],
+      "reference_page": "operations/system/gethealth.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "HealthResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "HealthResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<HealthResponse> GetHealthAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/execution"
+      },
+      "members": {
+        "async": "GetJobExecutionAsync"
+      },
+      "operation_id": "getJobExecution",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobexecution.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobExecutionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobExecutionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<JobExecutionResponse> GetJobExecutionAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}/logs"
+      },
+      "members": {
+        "async": "GetJobLogsAsync"
+      },
+      "operation_id": "getJobLogs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjoblogs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobLogsResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobLogsResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<JobLogsResponse> GetJobLogsAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs/{jobId}"
+      },
+      "members": {
+        "async": "GetJobStatusAsync"
+      },
+      "operation_id": "getJobStatus",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "jobId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/getjobstatus.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<JobSummary> GetJobStatusAsync(\nstring jobId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/fleet"
+      },
+      "members": {
+        "async": "GetOrganizationFleetAsync"
+      },
+      "operation_id": "getOrganizationFleet",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/getorganizationfleet.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<OrganizationFleetResponse> GetOrganizationFleetAsync(\nstring orgId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/catalog"
+      },
+      "members": {
+        "async": "GetWhiteLabelCloudCatalogAsync"
+      },
+      "operation_id": "getWhiteLabelCloudCatalog",
+      "parameters": [],
+      "reference_page": "operations/cloud/getwhitelabelcloudcatalog.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "WhiteLabelCloudCatalog",
+              "media_type": "application/json",
+              "type_refs": [
+                "WhiteLabelCloudCatalog"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<WhiteLabelCloudCatalog> GetWhiteLabelCloudCatalogAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/inspect"
+      },
+      "members": {
+        "async": "InspectProjectAsync"
+      },
+      "operation_id": "inspectProject",
+      "parameters": [],
+      "reference_page": "operations/jobs/inspectproject.md",
+      "request_body": {
+        "contract_type": "InspectProjectRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "InspectProjectRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProjectInspectionPlan",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProjectInspectionPlan"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<ProjectInspectionPlan> InspectProjectAsync(\nInspectProjectRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/capabilities"
+      },
+      "members": {
+        "async": "ListCapabilitiesAsync"
+      },
+      "operation_id": "listCapabilities",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "query",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "state",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/system/listcapabilities.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CapabilitiesResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CapabilitiesResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<CapabilitiesResponse> ListCapabilitiesAsync(\nstring? queryXf1e9d09a9612 = null,\nListCapabilitiesState? state = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/cloud/boxes"
+      },
+      "members": {
+        "async": "ListCloudBoxesAsync"
+      },
+      "operation_id": "listCloudBoxes",
+      "parameters": [],
+      "reference_page": "operations/cloud/listcloudboxes.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<CloudBoxListResponse> ListCloudBoxesAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "async": "ListJobsAsync"
+      },
+      "operation_id": "listJobs",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "status",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "string",
+          "in": "query",
+          "name": "boxId",
+          "required": false,
+          "type_refs": []
+        },
+        {
+          "contract_type": "integer",
+          "in": "query",
+          "name": "limit",
+          "required": false,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/jobs/listjobs.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobListResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobListResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<JobListResponse> ListJobsAsync(\nListJobsStatus? status = null,\nstring? boxId = null,\nlong? limit = null,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "async": "ListOrganizationMembersAsync"
+      },
+      "operation_id": "listOrganizationMembers",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/listorganizationmembers.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMembersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMembersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<OrganizationMembersResponse> ListOrganizationMembersAsync(\nstring orgId,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/providers"
+      },
+      "members": {
+        "async": "ListProvidersAsync"
+      },
+      "operation_id": "listProviders",
+      "parameters": [],
+      "reference_page": "operations/system/listproviders.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "ProvidersResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "ProvidersResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<ProvidersResponse> ListProvidersAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "GET",
+        "path": "/v1/saas/plans"
+      },
+      "members": {
+        "async": "ListSaasPlansAsync"
+      },
+      "operation_id": "listSaasPlans",
+      "parameters": [],
+      "reference_page": "operations/fleet/listsaasplans.md",
+      "request_body": null,
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SaasPlansResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SaasPlansResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<SaasPlansResponse> ListSaasPlansAsync(\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/action"
+      },
+      "members": {
+        "async": "PerformCloudBoxActionAsync"
+      },
+      "operation_id": "performCloudBoxAction",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/performcloudboxaction.md",
+      "request_body": {
+        "contract_type": "CloudBoxActionRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "CloudBoxActionRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "CloudBoxActionResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "CloudBoxActionResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<CloudBoxActionResponse> PerformCloudBoxActionAsync(\nstring boxId,\nCloudBoxActionRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/agent-jobs"
+      },
+      "members": {
+        "async": "StartAgentJobAsync"
+      },
+      "operation_id": "startAgentJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startagentjob.md",
+      "request_body": {
+        "contract_type": "StartAgentJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartAgentJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public async Task<JobSummary> StartAgentJobAsync(\nStartAgentJobRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/github-jobs"
+      },
+      "members": {
+        "async": "StartGithubJobAsync"
+      },
+      "operation_id": "startGithubJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startgithubjob.md",
+      "request_body": {
+        "contract_type": "StartGithubJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartGithubJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public async Task<JobSummary> StartGithubJobAsync(\nStartGithubJobRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/jobs"
+      },
+      "members": {
+        "async": "StartProjectJobAsync"
+      },
+      "operation_id": "startProjectJob",
+      "parameters": [],
+      "reference_page": "operations/jobs/startprojectjob.md",
+      "request_body": {
+        "contract_type": "StartProjectJobRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "StartProjectJobRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "JobSummary",
+              "media_type": "application/json",
+              "type_refs": [
+                "JobSummary"
+              ]
+            }
+          ],
+          "status": "201"
+        }
+      ],
+      "signature": "public async Task<JobSummary> StartProjectJobAsync(\nStartProjectJobRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/cloud/boxes/{boxId}/vault"
+      },
+      "members": {
+        "async": "SyncCloudBoxVaultAsync"
+      },
+      "operation_id": "syncCloudBoxVault",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "boxId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/cloud/synccloudboxvault.md",
+      "request_body": {
+        "contract_type": "SyncCloudBoxVaultRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "SyncCloudBoxVaultRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "SyncCloudBoxVaultResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "SyncCloudBoxVaultResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<SyncCloudBoxVaultResponse> SyncCloudBoxVaultAsync(\nstring boxId,\nSyncCloudBoxVaultRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "PUT",
+        "path": "/v1/organizations/{orgId}/fleet/policy"
+      },
+      "members": {
+        "async": "UpdateOrganizationFleetPolicyAsync"
+      },
+      "operation_id": "updateOrganizationFleetPolicy",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/updateorganizationfleetpolicy.md",
+      "request_body": {
+        "contract_type": "FleetPolicyUpdateRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "FleetPolicyUpdateRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationFleetResponse",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationFleetResponse"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<OrganizationFleetResponse> UpdateOrganizationFleetPolicyAsync(\nstring orgId,\nFleetPolicyUpdateRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    },
+    {
+      "deprecated": false,
+      "example": null,
+      "http": {
+        "method": "POST",
+        "path": "/v1/organizations/{orgId}/members"
+      },
+      "members": {
+        "async": "UpsertOrganizationMemberAsync"
+      },
+      "operation_id": "upsertOrganizationMember",
+      "parameters": [
+        {
+          "contract_type": "string",
+          "in": "path",
+          "name": "orgId",
+          "required": true,
+          "type_refs": []
+        }
+      ],
+      "reference_page": "operations/fleet/upsertorganizationmember.md",
+      "request_body": {
+        "contract_type": "UpsertOrganizationMemberRequest",
+        "media_types": [
+          "application/json"
+        ],
+        "required": true,
+        "type_refs": [
+          "UpsertOrganizationMemberRequest"
+        ]
+      },
+      "responses": [
+        {
+          "content": [
+            {
+              "contract_type": "OrganizationMember",
+              "media_type": "application/json",
+              "type_refs": [
+                "OrganizationMember"
+              ]
+            }
+          ],
+          "status": "200"
+        }
+      ],
+      "signature": "public async Task<OrganizationMember> UpsertOrganizationMemberAsync(\nstring orgId,\nUpsertOrganizationMemberRequest body,\nRequestOptions? requestOptions = null,\nCancellationToken cancellationToken = default)"
+    }
+  ],
+  "package": {
+    "group": null,
+    "name": "BoxFleetSdk",
+    "version": "0.3.0"
+  },
+  "package_unavailable_reason": null,
+  "provenance": {
+    "api_version": "0.3.0",
+    "artifact_manifest": "../../sdk/dotnet/BoxFleetSdk/omniwrap-artifact.json",
+    "artifact_manifest_sha256": "278d03ceee3b201165ac979d3ff5e876888c7fab0bb0f52ec8ddb576a1f603dc",
+    "artifact_type": "dotnet-sdk",
+    "contract_fingerprint": "17dde1a898058b32e5704774b765a51c2bcf12bdd04ec3805d6b6804ac5ae7fa",
+    "generator": {
+      "name": "omniwrap",
+      "version": "2.0.0"
+    },
+    "maturity": "experimental",
+    "semantic_ir_version": "1.14.0"
+  },
+  "types": [
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CapabilitiesResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxActionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxEnvelope"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CloudBoxListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "CreateCloudBoxRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "FleetPolicyUpdateRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "HealthResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "InspectProjectRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobExecutionResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobListResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobLogsResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "JobSummary"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ModsCatalogResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationFleetResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMember"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "OrganizationMembersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProjectInspectionPlan"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "ProvidersResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SaasPlansResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartAgentJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartGithubJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "StartProjectJobRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "SyncCloudBoxVaultResponse"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "UpsertOrganizationMemberRequest"
+    },
+    {
+      "defined": true,
+      "kind": "contract-schema",
+      "name": "WhiteLabelCloudCatalog"
+    }
+  ],
+  "unavailable_reason": null,
+  "version": "1.0.0"
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getJobStatus · BoxFleet</title>
+<meta name="omniwrap-docs-build" content="5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e">
+<meta name="omniwrap-docs-api-version" content="0.3.0">
+<meta name="omniwrap-docs-title" content="getJobStatus">
+<meta name="omniwrap-docs-language" content="http">
+<meta name="omniwrap-docs-route" content="http/jobs/getjobstatus.html">
+<meta name="omniwrap-docs-source" content="generated">
+<link rel="alternate" type="text/markdown" href="getjobstatus.md">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="top">
+<a class="brand" href="../../index.html">BoxFleet</a>
+<form class="search" role="search" action="../../search.html"><label class="sr" for="q" data-i18n="search">Search the documentation</label><input id="q" name="q" type="search" data-i18n-placeholder="search" placeholder="Search the documentation"></form>
+<div class="tools"><button type="button" data-locale-toggle aria-label="Reading language">FR</button><button type="button" data-theme-toggle data-i18n="theme">Theme</button><button type="button" class="menu" aria-expanded="false" aria-controls="side" data-i18n="menu">Menu</button></div>
+</header>
+<div class="context"><span><span data-i18n="edition">Edition</span> <code title="5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e">5e16c0150e0e</code> (one edition in this build)</span><span><span data-i18n="api">API version</span> <code>0.3.0</code></span><nav aria-label="SDK language"><span class="sr" data-i18n="language">SDK language</span><ul class="langs"><li><a href="../../sdk/dotnet/jobs/getjobstatus.html">dotnet</a></li><li><a href="../../sdk/go/jobs/getjobstatus.html">go</a></li><li><a href="../../sdk/java/jobs/getjobstatus.html">java</a></li><li><a href="../../sdk/javascript/jobs/getjobstatus.html">javascript</a></li><li><a href="../../sdk/kotlin/jobs/getjobstatus.html">kotlin</a></li><li><a href="../../sdk/python/jobs/getjobstatus.html">python</a></li><li><a href="../../sdk/rust/jobs/getjobstatus.html">rust</a></li><li><a href="../../sdk/typescript/jobs/getjobstatus.html">typescript</a></li></ul></nav></div>
+<nav class="tabs" aria-label="Documentation"><a href="../../index.html" data-i18n="start">Start</a><a href="../../sdk/index.html" data-i18n="sdk">SDK reference</a><a href="../../http/index.html" data-i18n="http" aria-current="page">HTTP reference</a></nav>
+<div class="layout">
+<nav id="side" class="side" aria-label="Pages"><ul><li><a href="canceljob.html">cancelJob</a></li><li><a href="../cloud/createcloudbox.html">createCloudBox</a></li><li><a href="../system/describeagentmods.html">describeAgentMods</a></li><li><a href="../system/gethealth.html">getHealth</a></li><li><a href="getjobexecution.html">getJobExecution</a></li><li><a href="getjoblogs.html">getJobLogs</a></li><li><a href="getjobstatus.html" aria-current="page">getJobStatus</a></li><li><a href="../fleet/getorganizationfleet.html">getOrganizationFleet</a></li><li><a href="../cloud/getwhitelabelcloudcatalog.html">getWhiteLabelCloudCatalog</a></li><li><a href="inspectproject.html">inspectProject</a></li><li><a href="../system/listcapabilities.html">listCapabilities</a></li><li><a href="../cloud/listcloudboxes.html">listCloudBoxes</a></li><li><a href="listjobs.html">listJobs</a></li><li><a href="../fleet/listorganizationmembers.html">listOrganizationMembers</a></li><li><a href="../system/listproviders.html">listProviders</a></li><li><a href="../fleet/listsaasplans.html">listSaasPlans</a></li><li><a href="../cloud/performcloudboxaction.html">performCloudBoxAction</a></li><li><a href="startagentjob.html">startAgentJob</a></li><li><a href="startgithubjob.html">startGithubJob</a></li><li><a href="startprojectjob.html">startProjectJob</a></li><li><a href="../cloud/synccloudboxvault.html">syncCloudBoxVault</a></li><li><a href="../fleet/updateorganizationfleetpolicy.html">updateOrganizationFleetPolicy</a></li><li><a href="../fleet/upsertorganizationmember.html">upsertOrganizationMember</a></li></ul></nav>
+<main id="main" tabindex="-1"><article>
+<p class="note" data-source-language hidden></p>
+<details class="toc-inline"><summary data-i18n="onpage">On this page</summary><ul><li><a href="#parameters">Parameters</a></li><li><a href="#body">Request body</a></li><li><a href="#responses">Responses</a></li><li><a href="#security">Security</a></li><li><a href="#example">Illustrative input</a></li><li><a href="#sdks">SDK symbols</a></li></ul></details>
+<h1>getJobStatus</h1>
+<p>Retrieve current status, exit code, and cleanup receipt of a job</p>
+<p><span class="badge">GET</span> <code>/v1/jobs/{jobId}</code></p>
+<h2 id="parameters">Parameters</h2><div class="table"><table><thead><tr><th scope="col">Name</th><th scope="col">In</th><th scope="col">Required</th><th scope="col">Contract type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>jobId</code></td><td>path</td><td>yes</td><td><code>string</code></td><td></td></tr></tbody></table></div><h2 id="body">Request body</h2><p class="note">This operation takes no request body.</p><h2 id="responses">Responses</h2><div class="table"><table><thead><tr><th scope="col">Status</th><th scope="col">Description</th><th scope="col">Content</th></tr></thead><tbody><tr><td><code>200</code></td><td>Job status snapshot</td><td>application/json (JobSummary)</td></tr></tbody></table></div><h2 id="security">Security</h2><p>Any one of: <code>bearerAuth</code></p><h2 id="example">Illustrative input</h2><p class="note">Not executed. No execution proof is attached.</p><pre><code>{
+  &quot;parameters&quot;: [
+    {
+      &quot;in&quot;: &quot;path&quot;,
+      &quot;name&quot;: &quot;jobId&quot;,
+      &quot;value&quot;: &quot;example&quot;
+    }
+  ]
+}</code></pre><h2 id="sdks">SDK symbols</h2><div class="table"><table><thead><tr><th scope="col">SDK</th><th scope="col">Symbol</th><th scope="col">Reference</th></tr></thead><tbody><tr><td>dotnet</td><td><code>client.GetJobStatusAsync</code></td><td><a href="../../sdk/dotnet/jobs/getjobstatus.html">Open</a></td></tr><tr><td>go</td><td><code>client.Jobs.GetStatus</code></td><td><a href="../../sdk/go/jobs/getjobstatus.html">Open</a></td></tr><tr><td>java</td><td><code>client.getJobStatus</code></td><td><a href="../../sdk/java/jobs/getjobstatus.html">Open</a></td></tr><tr><td>javascript</td><td><code>client.jobs.getStatus</code></td><td><a href="../../sdk/javascript/jobs/getjobstatus.html">Open</a></td></tr><tr><td>kotlin</td><td><code>client.getJobStatus</code></td><td><a href="../../sdk/kotlin/jobs/getjobstatus.html">Open</a></td></tr><tr><td>python</td><td><code>client.jobs.get_status</code></td><td><a href="../../sdk/python/jobs/getjobstatus.html">Open</a></td></tr><tr><td>rust</td><td><code>client.get_job_status</code></td><td><a href="../../sdk/rust/jobs/getjobstatus.html">Open</a></td></tr><tr><td>typescript</td><td><code>client.jobs.getStatus</code></td><td><a href="../../sdk/typescript/jobs/getjobstatus.html">Open</a></td></tr></tbody></table></div>
+</article></main>
+<aside class="toc"><nav aria-labelledby="toc-h"><p id="toc-h" data-i18n="onpage">On this page</p><ul><li><a href="#parameters">Parameters</a></li><li><a href="#body">Request body</a></li><li><a href="#responses">Responses</a></li><li><a href="#security">Security</a></li><li><a href="#example">Illustrative input</a></li><li><a href="#sdks">SDK symbols</a></li></ul></nav></aside>
+</div>
+<footer>Documentation build <code>5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e</code>. Generated reference; examples are illustrative and not executed.</footer>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

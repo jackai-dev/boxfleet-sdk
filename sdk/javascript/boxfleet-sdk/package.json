@@ -1,0 +1,31 @@
+{
+  "name": "boxfleet-sdk",
+  "version": "0.3.0",
+  "omniwrap": {
+    "sourceVersion": "0.3.0"
+  },
+  "main": "./index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "README.md",
+    "api.md",
+    "omniwrap-artifact.json",
+    "index.d.ts",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "types": "./index.d.ts",
+  "license": "UNLICENSED"
+}

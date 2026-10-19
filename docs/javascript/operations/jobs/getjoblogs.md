@@ -1,0 +1,76 @@
+# getJobLogs
+
+[Overview](../../index.md) · [Configuration](../../configuration.md) · [Authentication](../../authentication.md) · [Errors](../../errors.md) · [Pagination](../../pagination.md) · [Streaming](../../streaming.md) · [Operations](../../operations/index.md) · [API index](../../api.md)
+
+[All operations](../index.md)
+
+Read redacted stdout and stderr streams for a sandbox job
+
+Route: `GET` `/v1/jobs/{jobId}/logs`  
+Deprecated: **no**  
+SDK maturity: **verified**  
+Artifact evidence: [`omniwrap-artifact.json`](../../../../sdk/javascript/boxfleet-sdk/omniwrap-artifact.json), SHA-256 `702de30e4f323326bc7dfd2c1397dcb8d9e21419fe1ac077c0fe95d4341c6e20`
+
+HTTP reference: [`GET` `/v1/jobs/{jobId}/logs`](../../../http/operations/jobs/getjoblogs.md)
+
+## The same operation in other SDKs
+
+| SDK | Symbol | Reference |
+| --- | --- | --- |
+| dotnet | `client.GetJobLogsAsync` | [dotnet reference](../../../dotnet/operations/jobs/getjoblogs.md) |
+| go | `client.Jobs.GetLogs` | [go reference](../../../go/operations/jobs/getjoblogs.md) |
+| java | `client.getJobLogs` | [java reference](../../../java/operations/jobs/getjoblogs.md) |
+| kotlin | `client.getJobLogs` | [kotlin reference](../../../kotlin/operations/jobs/getjoblogs.md) |
+| python | `client.jobs.get_logs` | [python reference](../../../python/operations/jobs/getjoblogs.md) |
+| rust | `client.get_job_logs` | [rust reference](../../../rust/operations/jobs/getjoblogs.md) |
+| typescript | `client.jobs.getLogs` | [typescript reference](../../../typescript/operations/jobs/getjoblogs.md) |
+
+## Public members
+
+| Surface | Callable |
+| --- | --- |
+| flat | `client.getJobLogs` |
+| resource | `client.jobs.getLogs` |
+
+## Signature
+
+```javascript
+client.jobs.getLogs(jobId, requestOptions?)
+```
+
+## Parameters
+
+| Name | In | Required | Contract type | Description |
+| --- | --- | --- | --- | --- |
+| `jobId` | `path` | yes | `string` |  |
+
+## Canonical required-input example
+
+Illustrative input, not executed.
+
+```json
+{
+  "parameters": [
+    {
+      "in": "path",
+      "name": "jobId",
+      "value": "example"
+    }
+  ]
+}
+```
+
+## SDK call example
+
+Example status: `generated`  
+Illustrative code, not executed; no execution proof is attached to this example.
+
+```javascript
+const result = await client.jobs.getLogs("example");
+```
+
+## Responses
+
+| Status | Description | Content |
+| --- | --- | --- |
+| `200` | Redacted job logs | application/json (JobLogsResponse) |

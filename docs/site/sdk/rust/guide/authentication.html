@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authentication · rust · BoxFleet</title>
+<meta name="omniwrap-docs-build" content="5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e">
+<meta name="omniwrap-docs-api-version" content="0.3.0">
+<meta name="omniwrap-docs-title" content="Authentication · rust">
+<meta name="omniwrap-docs-language" content="rust">
+<meta name="omniwrap-docs-route" content="sdk/rust/guide/authentication.html">
+<meta name="omniwrap-docs-source" content="generated">
+<link rel="alternate" type="text/markdown" href="authentication.md">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="top">
+<a class="brand" href="../../../index.html">BoxFleet</a>
+<form class="search" role="search" action="../../../search.html"><label class="sr" for="q" data-i18n="search">Search the documentation</label><input id="q" name="q" type="search" data-i18n-placeholder="search" placeholder="Search the documentation"></form>
+<div class="tools"><button type="button" data-locale-toggle aria-label="Reading language">FR</button><button type="button" data-theme-toggle data-i18n="theme">Theme</button><button type="button" class="menu" aria-expanded="false" aria-controls="side" data-i18n="menu">Menu</button></div>
+</header>
+<div class="context"><span><span data-i18n="edition">Edition</span> <code title="5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e">5e16c0150e0e</code> (one edition in this build)</span><span><span data-i18n="api">API version</span> <code>0.3.0</code></span><nav aria-label="SDK language"><span class="sr" data-i18n="language">SDK language</span><ul class="langs"><li><a href="../../dotnet/guide/authentication.html">dotnet</a></li><li><a href="../../go/guide/authentication.html">go</a></li><li><a href="../../java/guide/authentication.html">java</a></li><li><a href="../../javascript/guide/authentication.html">javascript</a></li><li><a href="../../kotlin/guide/authentication.html">kotlin</a></li><li><a href="../../python/guide/authentication.html">python</a></li><li><a href="authentication.html" aria-current="page">rust</a></li><li><a href="../../typescript/guide/authentication.html">typescript</a></li></ul></nav></div>
+<nav class="tabs" aria-label="Documentation"><a href="../../../index.html" data-i18n="start">Start</a><a href="../../../sdk/index.html" data-i18n="sdk" aria-current="page">SDK reference</a><a href="../../../http/index.html" data-i18n="http">HTTP reference</a></nav>
+<div class="layout">
+<nav id="side" class="side" aria-label="Pages"><p class="side-label">Guides for this SDK</p><ul><li><a href="getting-started.html">Getting started</a></li><li><a href="installation.html">Installation</a></li><li><a href="configuration.html">Configuration</a></li><li><a href="authentication.html" aria-current="page">Authentication</a></li><li><a href="errors.html">Errors</a></li><li><a href="pagination.html">Pagination</a></li><li><a href="streaming.html">Streaming</a></li><li><a href="migration.html">Migration</a></li></ul><p class="side-label">Operations</p><ul><li><a href="../jobs/canceljob.html">cancelJob</a></li><li><a href="../cloud/createcloudbox.html">createCloudBox</a></li><li><a href="../system/describeagentmods.html">describeAgentMods</a></li><li><a href="../system/gethealth.html">getHealth</a></li><li><a href="../jobs/getjobexecution.html">getJobExecution</a></li><li><a href="../jobs/getjoblogs.html">getJobLogs</a></li><li><a href="../jobs/getjobstatus.html">getJobStatus</a></li><li><a href="../fleet/getorganizationfleet.html">getOrganizationFleet</a></li><li><a href="../cloud/getwhitelabelcloudcatalog.html">getWhiteLabelCloudCatalog</a></li><li><a href="../jobs/inspectproject.html">inspectProject</a></li><li><a href="../system/listcapabilities.html">listCapabilities</a></li><li><a href="../cloud/listcloudboxes.html">listCloudBoxes</a></li><li><a href="../jobs/listjobs.html">listJobs</a></li><li><a href="../fleet/listorganizationmembers.html">listOrganizationMembers</a></li><li><a href="../system/listproviders.html">listProviders</a></li><li><a href="../fleet/listsaasplans.html">listSaasPlans</a></li><li><a href="../cloud/performcloudboxaction.html">performCloudBoxAction</a></li><li><a href="../jobs/startagentjob.html">startAgentJob</a></li><li><a href="../jobs/startgithubjob.html">startGithubJob</a></li><li><a href="../jobs/startprojectjob.html">startProjectJob</a></li><li><a href="../cloud/synccloudboxvault.html">syncCloudBoxVault</a></li><li><a href="../fleet/updateorganizationfleetpolicy.html">updateOrganizationFleetPolicy</a></li><li><a href="../fleet/upsertorganizationmember.html">upsertOrganizationMember</a></li></ul></nav>
+<main id="main" tabindex="-1"><article>
+<p class="note" data-source-language hidden></p>
+<details class="toc-inline"><summary data-i18n="onpage">On this page</summary><ul><li><a href="#schemes">Schemes</a></li><li><a href="#operation-requirements">Operation requirements</a></li><li><a href="#artifact-capability-evidence">Artifact capability evidence</a></li><li><a href="#artifact-limitations">Artifact limitations</a></li></ul></details>
+<h1>Authentication · rust</h1>
+<h2 id="schemes">Schemes</h2>
+<div class="table"><table><thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Wire detail</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bearerAuth</code></td><td><code>http</code></td><td>bearer</td><td></td></tr></tbody></table></div>
+<h2 id="operation-requirements">Operation requirements</h2>
+<div class="table"><table><thead><tr><th scope="col">Operation</th><th scope="col">Accepted requirement</th></tr></thead><tbody><tr><td><a href="../jobs/canceljob.html"><code>cancelJob</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../cloud/createcloudbox.html"><code>createCloudBox</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../system/describeagentmods.html"><code>describeAgentMods</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/getjobexecution.html"><code>getJobExecution</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/getjoblogs.html"><code>getJobLogs</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/getjobstatus.html"><code>getJobStatus</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../fleet/getorganizationfleet.html"><code>getOrganizationFleet</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/inspectproject.html"><code>inspectProject</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../system/listcapabilities.html"><code>listCapabilities</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../cloud/listcloudboxes.html"><code>listCloudBoxes</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/listjobs.html"><code>listJobs</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../fleet/listorganizationmembers.html"><code>listOrganizationMembers</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../system/listproviders.html"><code>listProviders</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../cloud/performcloudboxaction.html"><code>performCloudBoxAction</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/startagentjob.html"><code>startAgentJob</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/startgithubjob.html"><code>startGithubJob</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../jobs/startprojectjob.html"><code>startProjectJob</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../cloud/synccloudboxvault.html"><code>syncCloudBoxVault</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../fleet/updateorganizationfleetpolicy.html"><code>updateOrganizationFleetPolicy</code></a></td><td>bearerAuth</td></tr><tr><td><a href="../fleet/upsertorganizationmember.html"><code>upsertOrganizationMember</code></a></td><td>bearerAuth</td></tr></tbody></table></div>
+<h2 id="artifact-capability-evidence">Artifact capability evidence</h2>
+<ul><li><code>api-key-bearer-basic-authentication</code></li><li><code>preconfigured-mtls-client-support</code></li></ul>
+<h2 id="artifact-limitations">Artifact limitations</h2>
+<ul><li><code>oauth-token-acquisition-not-generated</code></li></ul>
+</article></main>
+<aside class="toc"><nav aria-labelledby="toc-h"><p id="toc-h" data-i18n="onpage">On this page</p><ul><li><a href="#schemes">Schemes</a></li><li><a href="#operation-requirements">Operation requirements</a></li><li><a href="#artifact-capability-evidence">Artifact capability evidence</a></li><li><a href="#artifact-limitations">Artifact limitations</a></li></ul></nav></aside>
+</div>
+<footer>Documentation build <code>5e16c0150e0eb5af7a4ed86a0fa01dc08bc1aa416d727382b7d14a6ae579518e</code>. Generated reference; examples are illustrative and not executed.</footer>
+<script src="../../../assets/site.js"></script>
+</body>
+</html>

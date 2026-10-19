@@ -1,0 +1,22 @@
+{
+  "$schema": "https://omniwrap.dev/schemas/kotlin-package/v1",
+  "archive_type": "jar",
+  "artifact": "boxfleet-sdk",
+  "dependencies": [
+    "org.jetbrains.kotlin:kotlin-stdlib:2.0.21",
+    "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4"
+  ],
+  "expected_jar": "boxfleet-sdk-0.3.0.jar",
+  "gradle_minimum": "8.10.2",
+  "group": "dev.omniwrap.boxfleet.sdk",
+  "jvm_toolchain": 17,
+  "kotlin_compiler": "2.0.21",
+  "namespace": "dev.omniwrap.boxfleet.sdk",
+  "public_entry_class": "dev.omniwrap.boxfleet.sdk.ApiClient",
+  "repositories": [
+    "mavenCentral"
+  ],
+  "source_root": "src/main/kotlin",
+  "source_version": "0.3.0",
+  "version": "0.3.0"
+}
