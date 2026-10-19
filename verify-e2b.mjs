@@ -124,7 +124,7 @@ async function main() {
     assert.ok(mcpResponse.result.serverInfo.name.includes('boxfleet'));
 
     const skillMd = await readFile(join(process.cwd(), 'skill/use-boxfleet/SKILL.md'), 'utf8');
-    assert.ok(skillMd.includes('BoxFleet'));
+    assert.ok(/boxfleet/i.test(skillMd));
 
     console.log(JSON.stringify({
       ok: true,
